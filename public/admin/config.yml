@@ -9,13 +9,14 @@ public_folder: "/images/uploads"
 collections:
   - name: "site-content"
     label: "Website Content"
-    file: "src/content/site-content.json"
-    format: "json"
-    extension: "json"
-    create: false
-    delete: false
-    editor:
-      preview: false
+    files:
+     - file: "src/content/site-content.json"
+       format: "json"
+       extension: "json"
+       create: false
+       delete: false
+       editor:
+        preview: false
     fields:
       - label: "Hero Section"
         name: "hero"
