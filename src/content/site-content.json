@@ -8,18 +8,183 @@
     "it": "Competenza navale, rope access, costruzioni e saldatura — eseguiti con precisione su terra e mare."
   },
   "heroImages": [
-   "/images/uploads/wonder_of_the_seas.jpg", 
-   "/images/uploads/cloche_d_or.jpg", 
-   "/images/uploads/icon_of_the_seas.jpg", 
-   "/images/uploads/msc_grandiosa.jpg"
+    {
+      "url": "/images/uploads/wonder_of_the_seas.jpg"
+    },
+    {
+      "url": "/images/uploads/cloche_d_or.jpg"
+    },
+    {
+      "url": "/images/uploads/icon_of_the_seas.jpg"
+    },
+    {
+      "url": "/images/uploads/msc_grandiosa.jpeg"
+    }
   ],
-  "aboutTitle": {
-    "en": "About MarinePro",
-    "it": "Chi Siamo — MarinePro"
+  "clients": [
+    {
+      "logo": "/images/uploads/somec.png",
+      "name": "SOMEC",
+      "id": "c1"
+    },
+    {
+      "logo": "/images/uploads/jukova.png",
+      "name": "JUKOVA",
+      "id": "c2"
+    },
+    {
+      "logo": "/images/uploads//intercomv.png",
+      "name": "Intercom",
+      "id": "c3"
+    },
+    {
+      "logo": "/images/uploads/marine.png",
+      "name": "Marine Interiors",
+      "id": "c4"
+    },
+    {
+      "logo": "/images/uploads/aza.png",
+      "name": "AZA",
+      "id": "c5"
+    },
+    {
+      "logo": "/images/uploads/alu-metal.png",
+      "name": "Alu Metal",
+      "id": "c6"
+    }
+  ],
+  "projects": [
+    {
+      "client": "Naples Port Authority",
+      "featured": true,
+      "images": [
+        "/public/images/uploads/carnival_celebration.jpg"
+      ],
+      "year": 2023,
+      "serviceCategory": "naval",
+      "location": "Naples, Italy",
+      "description": {
+        "it": "Campagna completa di ispezione e pulizia dello scafo subacqueo per 12 navi commerciali all'Autorità Portuale di Napoli. Utilizzo di tecnologia ROV avanzata in combinazione con team di subacquei per una valutazione completa.",
+        "en": "Complete underwater hull inspection and cleaning campaign for 12 commercial vessels at Naples Port Authority. Utilized advanced ROV technology combined with diver teams for comprehensive assessment."
+      },
+      "title": {
+        "it": "Campagna di Ispezione Scafi Porto di Napoli",
+        "en": "Port of Naples Hull Inspection Campaign"
+      },
+      "id": "p1"
+    },
+    {
+      "client": "Enel Green Power",
+      "featured": true,
+      "images": [
+        "/public/images/uploads/carnival_horizon.jpg"
+      ],
+      "year": 2023,
+      "serviceCategory": "rope",
+      "location": "Adriatic Sea, Italy",
+      "description": {
+        "it": "Programma di ispezione e manutenzione rope access su 24 strutture di turbine eoliche nel Mar Adriatico. I lavori includevano valutazione della corrosione, riparazione del rivestimento e ispezione dei bulloni strutturali.",
+        "en": "Rope access inspection and maintenance program across 24 wind turbine structures in the Adriatic Sea. Works included corrosion assessment, coating repair, and structural bolt inspection."
+      },
+      "title": {
+        "it": "Manutenzione Parco Eolico Offshore — Adriatico",
+        "en": "Offshore Wind Farm Maintenance — Adriatic"
+      },
+      "id": "p2"
+    },
+    {
+      "client": "ENI S.p.A.",
+      "featured": true,
+      "images": [
+        "/public/images/uploads/celebrity_ascent.jpg"
+      ],
+      "year": 2022,
+      "serviceCategory": "welding",
+      "location": "Milazzo, Sicily",
+      "description": {
+        "it": "Lavori di saldatura e fabbricazione durante lo shutdown programmato presso una grande raffineria di petrolio in Sicilia. Un team di 18 saldatori certificati ha completato 2.400m di saldature su tubazioni secondo lo standard AWS D1.1 in 6 settimane.",
+        "en": "Planned shutdown welding and fabrication works at a major oil refinery in Sicily. Team of 18 certified welders completed 2,400m of pipeline welds to AWS D1.1 standard over 6 weeks."
+      },
+      "title": {
+        "it": "Shutdown Saldatura Raffineria Industriale",
+        "en": "Industrial Refinery Welding Shutdown"
+      },
+      "id": "p3"
+    },
+    {
+      "client": "Port Authority of Genova",
+      "featured": false,
+      "images": [
+        "/public/images/uploads/celebrity_beyond.jpg"
+      ],
+      "year": 2022,
+      "serviceCategory": "construction",
+      "location": "Genoa, Italy",
+      "description": {
+        "it": "Ristrutturazione completa di 340m di banchina portuale inclusa riparazione del calcestruzzo, impermeabilizzazione, sostituzione dei parabordi e installazione di hardware di ormeggio al porto commerciale di Genova.",
+        "en": "Comprehensive refurbishment of 340m of quay wall including concrete repair, waterproofing, fendering replacement, and mooring hardware installation at Genoa commercial harbour."
+      },
+      "title": {
+        "it": "Ristrutturazione Banchina Portuale",
+        "en": "Harbour Quay Wall Refurbishment"
+      },
+      "id": "p4"
+    },
+    {
+      "client": "Autostrade per l'Italia",
+      "featured": false,
+      "images": [
+        "/public/images/uploads/cloche_d_or.jpg"
+      ],
+      "year": 2023,
+      "serviceCategory": "rope",
+      "location": "Florence, Italy",
+      "description": {
+        "it": "Ispezione rope access di 8 campate di ponte autostradale che coprono 1,2km di struttura viadotto. I lavori includevano ispezione visiva, mappatura delle fessure, test di carbonatazione e valutazione della corrosione delle armature.",
+        "en": "Rope access inspection of 8 motorway bridge spans covering 1.2km of viaduct structure. Works included visual inspection, crack mapping, carbonation testing, and rebar corrosion assessment."
+      },
+      "title": {
+        "it": "Ispezione Ponte — Viadotto Autostrada A1",
+        "en": "Bridge Inspection — A1 Motorway Viaduct"
+      },
+      "id": "p5"
+    },
+    {
+      "client": "Marina Militare Italiana",
+      "featured": false,
+      "images": [
+        "/public/images/uploads/costa_smeralda.jpg"
+      ],
+      "year": 2021,
+      "serviceCategory": "naval",
+      "location": "Taranto, Italy",
+      "description": {
+        "it": "Revisione completa in bacino di carenaggio inclusa sabbiatura e verniciatura dello scafo, ispezione delle casse mare, estrazione e perizia dell'asse dell'elica, sostituzione degli anodi e riparazioni saldate alla struttura della chiglia.",
+        "en": "Full dry-dock overhaul including hull blasting and painting, sea-chest inspection, propeller shaft extraction and survey, anode replacement, and welding repairs to the keel structure."
+      },
+      "title": {
+        "it": "Revisione In Bacino di Carenaggio Nave Militare",
+        "en": "Naval Vessel Dry-Dock Overhaul"
+      },
+      "id": "p6"
+    }
+  ],
+  "contactInfo": {
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.0!2d14.2681!3d40.8518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDUxJzA2LjUiTiAxNMKwMTYnMDUuMiJF!5e0!3m2!1sen!2sit!4v1234567890",
+    "address": {
+      "it": "Via del Porto 42, 80133 Napoli, Italia",
+      "en": "Via del Porto 42, 80133 Naples, Italy"
+    },
+    "email": "info@marinepro.it",
+    "phone": "+39 081 123 4567"
   },
   "aboutText": {
-    "en": "Founded with a commitment to excellence, MarinePro has been delivering specialized industrial and marine services for over two decades. Our highly trained teams operate across Italy and internationally, bringing technical expertise and safety-first professionalism to every project.",
-    "it": "Fondata con un impegno per l'eccellenza, MarinePro fornisce servizi industriali e marini specializzati da oltre due decenni. I nostri team altamente qualificati operano in tutta Italia e a livello internazionale, portando competenza tecnica e professionalità incentrata sulla sicurezza in ogni progetto."
+    "it": "Fondata con un impegno per l'eccellenza, MarinePro fornisce servizi industriali e marini specializzati da oltre due decenni. I nostri team altamente qualificati operano in tutta Italia e a livello internazionale, portando competenza tecnica e professionalità incentrata sulla sicurezza in ogni progetto.",
+    "en": "Founded with a commitment to excellence, MarinePro has been delivering specialized industrial and marine services for over two decades. Our highly trained teams operate across Italy and internationally, bringing technical expertise and safety-first professionalism to every project."
+  },
+  "aboutTitle": {
+    "it": "Chi Siamo — MarinePro",
+    "en": "About MarinePro"
   },
   "mission": {
     "en": "To deliver world-class marine and industrial services with an unwavering commitment to safety, quality, and innovation — protecting people, assets, and the environment at every step.",
@@ -54,15 +219,6 @@
   "seoDescription": {
     "en": "Professional naval, rope access, construction and welding services. Operating across Italy and internationally with certified expertise.",
     "it": "Servizi professionali navali, rope access, costruzioni e saldatura. Operativi in tutta Italia e a livello internazionale con competenza certificata."
-  },
-  "contactInfo": {
-    "phone": "+39 081 123 4567",
-    "email": "info@marinepro.it",
-    "address": {
-      "en": "Via del Porto 42, 80133 Naples, Italy",
-      "it": "Via del Porto 42, 80133 Napoli, Italia"
-    },
-    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.0!2d14.2681!3d40.8518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDUxJzA2LjUiTiAxNMKwMTYnMDUuMiJF!5e0!3m2!1sen!2sit!4v1234567890"
   },
   "services": [
     {
@@ -126,9 +282,7 @@
       ],
       "heroImage": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1568454537842-d933259bb258?w=800&q=80",
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
-        "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800&q=80"
+        "/public/images/uploads/carnival_horizon.jpg"
       ],
       "icon": "anchor",
       "color": "#0077b6"
@@ -194,9 +348,7 @@
       ],
       "heroImage": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
-        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80",
-        "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800&q=80"
+        "/public/images/uploads/celebrity_ascent.jpg"
       ],
       "icon": "mountain",
       "color": "#e85d04"
@@ -262,9 +414,7 @@
       ],
       "heroImage": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80",
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
-        "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80"
+        "/public/images/uploads/cloche_d_or.jpg"
       ],
       "icon": "building",
       "color": "#588157"
@@ -330,160 +480,10 @@
       ],
       "heroImage": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80",
-        "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+        "/public/images/uploads/costa_smeralda.jpg"
       ],
       "icon": "flame",
       "color": "#c1121f"
-    }
-  ],
-  "projects": [
-    {
-      "id": "p1",
-      "title": {
-        "en": "Port of Naples Hull Inspection Campaign",
-        "it": "Campagna di Ispezione Scafi Porto di Napoli"
-      },
-      "description": {
-        "en": "Complete underwater hull inspection and cleaning campaign for 12 commercial vessels at Naples Port Authority. Utilized advanced ROV technology combined with diver teams for comprehensive assessment.",
-        "it": "Campagna completa di ispezione e pulizia dello scafo subacqueo per 12 navi commerciali all'Autorità Portuale di Napoli. Utilizzo di tecnologia ROV avanzata in combinazione con team di subacquei per una valutazione completa."
-      },
-      "location": "Naples, Italy",
-      "serviceCategory": "naval",
-      "year": 2023,
-      "images": [
-        "/public/images/uploads/carnival_celebration.jpg"
-      ],
-      "featured": true,
-      "client": "Naples Port Authority"
-    },
-    {
-      "id": "p2",
-      "title": {
-        "en": "Offshore Wind Farm Maintenance — Adriatic",
-        "it": "Manutenzione Parco Eolico Offshore — Adriatico"
-      },
-      "description": {
-        "en": "Rope access inspection and maintenance program across 24 wind turbine structures in the Adriatic Sea. Works included corrosion assessment, coating repair, and structural bolt inspection.",
-        "it": "Programma di ispezione e manutenzione rope access su 24 strutture di turbine eoliche nel Mar Adriatico. I lavori includevano valutazione della corrosione, riparazione del rivestimento e ispezione dei bulloni strutturali."
-      },
-      "location": "Adriatic Sea, Italy",
-      "serviceCategory": "rope",
-      "year": 2023,
-      "images": [
-         "/public/images/uploads/carnival_horizon.jpg"
-      ],
-      "featured": true,
-      "client": "Enel Green Power"
-    },
-    {
-      "id": "p3",
-      "title": {
-        "en": "Industrial Refinery Welding Shutdown",
-        "it": "Shutdown Saldatura Raffineria Industriale"
-      },
-      "description": {
-        "en": "Planned shutdown welding and fabrication works at a major oil refinery in Sicily. Team of 18 certified welders completed 2,400m of pipeline welds to AWS D1.1 standard over 6 weeks.",
-        "it": "Lavori di saldatura e fabbricazione durante lo shutdown programmato presso una grande raffineria di petrolio in Sicilia. Un team di 18 saldatori certificati ha completato 2.400m di saldature su tubazioni secondo lo standard AWS D1.1 in 6 settimane."
-      },
-      "location": "Milazzo, Sicily",
-      "serviceCategory": "welding",
-      "year": 2022,
-      "images": [
-         "/public/images/uploads/celebrity_ascent.jpg"
-      ],
-      "featured": true,
-      "client": "ENI S.p.A."
-    },
-    {
-      "id": "p4",
-      "title": {
-        "en": "Harbour Quay Wall Refurbishment",
-        "it": "Ristrutturazione Banchina Portuale"
-      },
-      "description": {
-        "en": "Comprehensive refurbishment of 340m of quay wall including concrete repair, waterproofing, fendering replacement, and mooring hardware installation at Genoa commercial harbour.",
-        "it": "Ristrutturazione completa di 340m di banchina portuale inclusa riparazione del calcestruzzo, impermeabilizzazione, sostituzione dei parabordi e installazione di hardware di ormeggio al porto commerciale di Genova."
-      },
-      "location": "Genoa, Italy",
-      "serviceCategory": "construction",
-      "year": 2022,
-      "images": [
-         "/public/images/uploads/celebrity_beyond.jpg"
-      ],
-      "featured": false,
-      "client": "Port Authority of Genova"
-    },
-    {
-      "id": "p5",
-      "title": {
-        "en": "Bridge Inspection — A1 Motorway Viaduct",
-        "it": "Ispezione Ponte — Viadotto Autostrada A1"
-      },
-      "description": {
-        "en": "Rope access inspection of 8 motorway bridge spans covering 1.2km of viaduct structure. Works included visual inspection, crack mapping, carbonation testing, and rebar corrosion assessment.",
-        "it": "Ispezione rope access di 8 campate di ponte autostradale che coprono 1,2km di struttura viadotto. I lavori includevano ispezione visiva, mappatura delle fessure, test di carbonatazione e valutazione della corrosione delle armature."
-      },
-      "location": "Florence, Italy",
-      "serviceCategory": "rope",
-      "year": 2023,
-      "images": [
-         "/public/images/uploads/cloche_d_or.jpg"
-      ],
-      "featured": false,
-      "client": "Autostrade per l'Italia"
-    },
-    {
-      "id": "p6",
-      "title": {
-        "en": "Naval Vessel Dry-Dock Overhaul",
-        "it": "Revisione In Bacino di Carenaggio Nave Militare"
-      },
-      "description": {
-        "en": "Full dry-dock overhaul including hull blasting and painting, sea-chest inspection, propeller shaft extraction and survey, anode replacement, and welding repairs to the keel structure.",
-        "it": "Revisione completa in bacino di carenaggio inclusa sabbiatura e verniciatura dello scafo, ispezione delle casse mare, estrazione e perizia dell'asse dell'elica, sostituzione degli anodi e riparazioni saldate alla struttura della chiglia."
-      },
-      "location": "Taranto, Italy",
-      "serviceCategory": "naval",
-      "year": 2021,
-      "images": [
-         "/public/images/uploads/costa_smeralda.jpg"
-      ],
-      "featured": false,
-      "client": "Marina Militare Italiana"
-    }
-  ],
-  "clients": [
-    {
-      "id": "c1",
-      "name": "ENI S.p.A.",
-      "logo": ""
-    },
-    {
-      "id": "c2",
-      "name": "Fincantieri",
-      "logo": ""
-    },
-    {
-      "id": "c3",
-      "name": "Enel Green Power",
-      "logo": ""
-    },
-    {
-      "id": "c4",
-      "name": "Autostrade per l'Italia",
-      "logo": ""
-    },
-    {
-      "id": "c5",
-      "name": "Marina Militare",
-      "logo": ""
-    },
-    {
-      "id": "c6",
-      "name": "Port Authority Naples",
-      "logo": ""
     }
   ],
   "team": [
@@ -498,7 +498,7 @@
         "en": "25+ years in marine engineering and offshore operations.",
         "it": "25+ anni nell'ingegneria marina e nelle operazioni offshore."
       },
-      "photo": ""
+      "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b2ZmaWNlJTIwbWFufGVufDB8fDB8fHwy"
     },
     {
       "id": "t2",
@@ -511,7 +511,7 @@
         "en": "IRATA Level 3 supervisor with 15 years of rope access experience.",
         "it": "Supervisore IRATA Livello 3 con 15 anni di esperienza nel rope access."
       },
-      "photo": ""
+      "photo": "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8b2ZmaWNlJTIwbWFufGVufDB8fDB8fHwy"
     },
     {
       "id": "t3",
@@ -524,7 +524,7 @@
         "en": "Structural engineer specialising in marine and industrial construction.",
         "it": "Ingegnere strutturale specializzato in costruzioni marine e industriali."
       },
-      "photo": ""
+      "photo": "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8b2ZmaWNlJTIwbWFufGVufDB8fDB8fHwy"
     }
   ]
 }

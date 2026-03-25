@@ -20,78 +20,74 @@ collections:
         editor:
           preview: false
         fields:
-          - label: "Hero Section"
-            name: "hero"
+          - label: "Hero Title"
+            name: "heroTitle"
             widget: "object"
             fields:
-              - label: "Hero Title"
-                name: "heroTitle"
-                widget: "object"
-                fields:
-                  - { label: "English", name: "en", widget: "string", required: true }
-                  - { label: "Italian", name: "it", widget: "string", required: true }
-              - label: "Hero Subtitle"
-                name: "heroSubtitle"
-                widget: "object"
-                fields:
-                  - { label: "English", name: "en", widget: "text" }
-                  - { label: "Italian", name: "it", widget: "text" }
-              - label: "Hero Images"
-                name: "heroImages"
-                widget: "list"
-                fields:
-                  - { label: "Image", name: "url", widget: "image" }
+              - { label: "English", name: "en", widget: "string", required: true }
+              - { label: "Italian", name: "it", widget: "string", required: true }
+          - label: "Hero Subtitle"
+            name: "heroSubtitle"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Italian", name: "it", widget: "text" }
+          - label: "Hero Images"
+            name: "heroImages"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "url", widget: "image" }
 
-          - label: "About Section"
-            name: "about"
+          # - label: "About Section"
+          #   name: "about"
+          #   widget: "object"
+          #   fields:
+          - label: "About Title"
+            name: "aboutTitle"
             widget: "object"
             fields:
-              - label: "About Title"
-                name: "aboutTitle"
-                widget: "object"
-                fields:
-                  - { label: "English", name: "en", widget: "string" }
-                  - { label: "Italian", name: "it", widget: "string" }
-              - label: "About Text"
-                name: "aboutText"
-                widget: "object"
-                fields:
-                  - { label: "English", name: "en", widget: "markdown" }
-                  - { label: "Italian", name: "it", widget: "markdown" }
-              - label: "Mission"
-                name: "mission"
-                widget: "object"
-                fields:
-                  - { label: "English", name: "en", widget: "text" }
-                  - { label: "Italian", name: "it", widget: "text" }
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Italian", name: "it", widget: "string" }
+          - label: "About Text"
+            name: "aboutText"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "markdown" }
+              - { label: "Italian", name: "it", widget: "markdown" }
+          - label: "Mission"
+            name: "mission"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Italian", name: "it", widget: "text" }
 
           - label: "Values"
             name: "values"
             widget: "list"
+          #   fields:
+          # - label: "Value"
+          #   name: "value"
+          #   widget: "object"
             fields:
-              - label: "Value"
-                name: "value"
-                widget: "object"
-                fields:
-                  - { label: "English", name: "en", widget: "string" }
-                  - { label: "Italian", name: "it", widget: "string" }
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Italian", name: "it", widget: "string" }
 
-          - label: "SEO"
-            name: "seo"
+      # - label: "SEO"
+      #   name: "seo"
+      #   widget: "object"
+      #   fields:
+          - label: "SEO Title"
+            name: "seoTitle"
             widget: "object"
             fields:
-              - label: "SEO Title"
-                name: "seoTitle"
-                widget: "object"
-                fields:
-                  - { label: "English", name: "en", widget: "string" }
-                  - { label: "Italian", name: "it", widget: "string" }
-              - label: "SEO Description"
-                name: "seoDescription"
-                widget: "object"
-                fields:
-                  - { label: "English", name: "en", widget: "text" }
-                  - { label: "Italian", name: "it", widget: "text" }
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Italian", name: "it", widget: "string" }
+          - label: "SEO Description"
+            name: "seoDescription"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Italian", name: "it", widget: "text" }
 
           - label: "Contact Info"
             name: "contactInfo"
@@ -134,23 +130,23 @@ collections:
               - label: "Benefits"
                 name: "benefits"
                 widget: "list"
+                # fields:
+                #   - label: "Benefit"
+                #     name: "benefit"
+                #     widget: "object"
                 fields:
-                  - label: "Benefit"
-                    name: "benefit"
-                    widget: "object"
-                    fields:
-                      - { label: "English", name: "en", widget: "string" }
-                      - { label: "Italian", name: "it", widget: "string" }
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Italian", name: "it", widget: "string" }
               - label: "Capabilities"
                 name: "capabilities"
                 widget: "list"
+                # fields:
+                #   - label: "Capability"
+                #     name: "capability"
+                #     widget: "object"
                 fields:
-                  - label: "Capability"
-                    name: "capability"
-                    widget: "object"
-                    fields:
-                      - { label: "English", name: "en", widget: "string" }
-                      - { label: "Italian", name: "it", widget: "string" }
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Italian", name: "it", widget: "string" }
               - { label: "Hero Image", name: "heroImage", widget: "image" }
               - label: "Gallery Images"
                 name: "images"
@@ -214,4 +210,4 @@ collections:
                 fields:
                   - { label: "English", name: "en", widget: "text" }
                   - { label: "Italian", name: "it", widget: "text" }
-              - { label: "Photo", name: "photo", widget: "image" }
+                  - { label: "Photo", name: "photo", widget: "image" }
