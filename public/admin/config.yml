@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   repo: el2toro/navigomaris
   branch: main
 
@@ -7,183 +7,183 @@ media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "site-content-collection"
+  - name: "site-content"
     label: "Website Content"
     files:
-     - file: "src/content/site-content.json"
-       name: "site-content"
-       label: "Site Content"
-       format: "json"
-       extension: "json"
-       create: false
-       delete: false
-       editor:
-        preview: true
-       fields:
-        - label: "Hero Section"
-          name: "hero"
-          widget: "object"
-          fields:
-            - { label: "Hero Title (EN)", name: "heroTitle.en", widget: "string", required: true }
-            - { label: "Hero Title (IT)", name: "heroTitle.it", widget: "string", required: true }
-            - { label: "Hero Subtitle (EN)", name: "heroSubtitle.en", widget: "text" }
-            - { label: "Hero Subtitle (IT)", name: "heroSubtitle.it", widget: "text" }
-            - label: "Hero Images"
-              name: "heroImages"
-              widget: "list"
-              fields:
-                - { label: "Image URL", name: "", widget: "image" }
+      - name: "site-content"
+        label: "Site Content"
+        file: "src/content/site-content.json"
+        format: "json"
+        extension: "json"
+        create: false
+        delete: false
+        editor:
+          preview: false                     # Set to true only if you create a preview template
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Hero Title (EN)", name: "heroTitle.en", widget: "string", required: true }
+              - { label: "Hero Title (IT)", name: "heroTitle.it", widget: "string", required: true }
+              - { label: "Hero Subtitle (EN)", name: "heroSubtitle.en", widget: "text" }
+              - { label: "Hero Subtitle (IT)", name: "heroSubtitle.it", widget: "text" }
+              - label: "Hero Images"
+                name: "heroImages"
+                widget: "list"
+                fields:
+                  - { label: "Image URL", name: "", widget: "image" }   # Better widget for uploads
 
-        - label: "About Section"
-          name: "about"
-          widget: "object"
-          fields:
-            - { label: "About Title (EN)", name: "aboutTitle.en", widget: "string" }
-            - { label: "About Title (IT)", name: "aboutTitle.it", widget: "string" }
-            - { label: "About Text (EN)", name: "aboutText.en", widget: "markdown" }
-            - { label: "About Text (IT)", name: "aboutText.it", widget: "markdown" }
-            - { label: "Mission (EN)", name: "mission.en", widget: "text" }
-            - { label: "Mission (IT)", name: "mission.it", widget: "text" }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "About Title (EN)", name: "aboutTitle.en", widget: "string" }
+              - { label: "About Title (IT)", name: "aboutTitle.it", widget: "string" }
+              - { label: "About Text (EN)", name: "aboutText.en", widget: "markdown" }
+              - { label: "About Text (IT)", name: "aboutText.it", widget: "markdown" }
+              - { label: "Mission (EN)", name: "mission.en", widget: "text" }
+              - { label: "Mission (IT)", name: "mission.it", widget: "text" }
 
-        - label: "Values"
-          name: "values"
-          widget: "list"
-          fields:
-            - label: "Value"
-              name: "value"
-              widget: "object"
-              fields:
-                - { label: "EN", name: "en", widget: "string" }
-                - { label: "IT", name: "it", widget: "string" }
+          - label: "Values"
+            name: "values"
+            widget: "list"
+            fields:
+              - label: "Value"
+                name: "value"
+                widget: "object"
+                fields:
+                  - { label: "EN", name: "en", widget: "string" }
+                  - { label: "IT", name: "it", widget: "string" }
 
-        - label: "SEO"
-          name: "seo"
-          widget: "object"
-          fields:
-            - { label: "SEO Title (EN)", name: "seoTitle.en", widget: "string" }
-            - { label: "SEO Title (IT)", name: "seoTitle.it", widget: "string" }
-            - { label: "SEO Description (EN)", name: "seoDescription.en", widget: "text" }
-            - { label: "SEO Description (IT)", name: "seoDescription.it", widget: "text" }
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "SEO Title (EN)", name: "seoTitle.en", widget: "string" }
+              - { label: "SEO Title (IT)", name: "seoTitle.it", widget: "string" }
+              - { label: "SEO Description (EN)", name: "seoDescription.en", widget: "text" }
+              - { label: "SEO Description (IT)", name: "seoDescription.it", widget: "text" }
 
-        - label: "Contact Info"
-          name: "contactInfo"
-          widget: "object"
-          fields:
-            - { label: "Phone", name: "phone", widget: "string" }
-            - { label: "Email", name: "email", widget: "string" }
-            - label: "Address"
-              name: "address"
-              widget: "object"
-              fields:
-                - { label: "EN", name: "en", widget: "string" }
-                - { label: "IT", name: "it", widget: "string" }
-            - { label: "Google Map Embed URL", name: "mapEmbed", widget: "string" }
+          - label: "Contact Info"
+            name: "contactInfo"
+            widget: "object"
+            fields:
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - label: "Address"
+                name: "address"
+                widget: "object"
+                fields:
+                  - { label: "EN", name: "en", widget: "string" }
+                  - { label: "IT", name: "it", widget: "string" }
+              - { label: "Google Map Embed URL", name: "mapEmbed", widget: "string" }
 
-        - label: "Services"
-          name: "services"
-          widget: "list"
-          fields:
-            - { label: "ID", name: "id", widget: "string" }
-            - { label: "Slug", name: "slug", widget: "string" }
-            - label: "Title"
-              name: "title"
-              widget: "object"
-              fields:
-                - { label: "EN", name: "en", widget: "string" }
-                - { label: "IT", name: "it", widget: "string" }
-            - label: "Short Description"
-              name: "shortDesc"
-              widget: "object"
-              fields:
-                - { label: "EN", name: "en", widget: "text" }
-                - { label: "IT", name: "it", widget: "text" }
-            - label: "Full Description"
-              name: "fullDesc"
-              widget: "object"
-              fields:
-                - { label: "EN", name: "en", widget: "markdown" }
-                - { label: "IT", name: "it", widget: "markdown" }
-            - label: "Benefits"
-              name: "benefits"
-              widget: "list"
-              fields:
-                - label: "Benefit"
-                  name: "benefit"
-                  widget: "object"
-                  fields:
-                    - { label: "EN", name: "en", widget: "string" }
-                    - { label: "IT", name: "it", widget: "string" }
-            - label: "Capabilities"
-              name: "capabilities"
-              widget: "list"
-              fields:
-                - label: "Capability"
-                  name: "capability"
-                  widget: "object"
-                  fields:
-                    - { label: "EN", name: "en", widget: "string" }
-                    - { label: "IT", name: "it", widget: "string" }
-            - { label: "Hero Image", name: "heroImage", widget: "string" }
-            - label: "Gallery Images"
-              name: "images"
-              widget: "list"
-              fields:
-                - { label: "Image URL", name: "", widget: "string" }
-            - { label: "Icon Name", name: "icon", widget: "string" }
-            - { label: "Color (Hex)", name: "color", widget: "string" }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Slug", name: "slug", widget: "string" }
+              - label: "Title"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "EN", name: "en", widget: "string" }
+                  - { label: "IT", name: "it", widget: "string" }
+              - label: "Short Description"
+                name: "shortDesc"
+                widget: "object"
+                fields:
+                  - { label: "EN", name: "en", widget: "text" }
+                  - { label: "IT", name: "it", widget: "text" }
+              - label: "Full Description"
+                name: "fullDesc"
+                widget: "object"
+                fields:
+                  - { label: "EN", name: "en", widget: "markdown" }
+                  - { label: "IT", name: "it", widget: "markdown" }
+              - label: "Benefits"
+                name: "benefits"
+                widget: "list"
+                fields:
+                  - label: "Benefit"
+                    name: "benefit"
+                    widget: "object"
+                    fields:
+                      - { label: "EN", name: "en", widget: "string" }
+                      - { label: "IT", name: "it", widget: "string" }
+              - label: "Capabilities"
+                name: "capabilities"
+                widget: "list"
+                fields:
+                  - label: "Capability"
+                    name: "capability"
+                    widget: "object"
+                    fields:
+                      - { label: "EN", name: "en", widget: "string" }
+                      - { label: "IT", name: "it", widget: "string" }
+              - { label: "Hero Image", name: "heroImage", widget: "image" }
+              - label: "Gallery Images"
+                name: "images"
+                widget: "list"
+                fields:
+                  - { label: "Image URL", name: "", widget: "image" }
+              - { label: "Icon Name", name: "icon", widget: "string" }
+              - { label: "Color (Hex)", name: "color", widget: "string" }
 
-        - label: "Projects"
-          name: "projects"
-          widget: "list"
-          fields:
-            - { label: "ID", name: "id", widget: "string" }
-            - label: "Title"
-              name: "title"
-              widget: "object"
-              fields:
-                - { label: "EN", name: "en", widget: "string" }
-                - { label: "IT", name: "it", widget: "string" }
-            - label: "Description"
-              name: "description"
-              widget: "object"
-              fields:
-                - { label: "EN", name: "en", widget: "text" }
-                - { label: "IT", name: "it", widget: "text" }
-            - { label: "Location", name: "location", widget: "string" }
-            - { label: "Service Category", name: "serviceCategory", widget: "string" }
-            - { label: "Year", name: "year", widget: "number" }
-            - label: "Images"
-              name: "images"
-              widget: "list"
-              fields:
-                - { label: "Image URL", name: "", widget: "image" }
-            - { label: "Featured", name: "featured", widget: "boolean" }
-            - { label: "Client", name: "client", widget: "string" }
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - label: "Title"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "EN", name: "en", widget: "string" }
+                  - { label: "IT", name: "it", widget: "string" }
+              - label: "Description"
+                name: "description"
+                widget: "object"
+                fields:
+                  - { label: "EN", name: "en", widget: "text" }
+                  - { label: "IT", name: "it", widget: "text" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Service Category", name: "serviceCategory", widget: "string" }
+              - { label: "Year", name: "year", widget: "number" }
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                fields:
+                  - { label: "Image URL", name: "", widget: "image" }
+              - { label: "Featured", name: "featured", widget: "boolean" }
+              - { label: "Client", name: "client", widget: "string" }
 
-        - label: "Clients"
-          name: "clients"
-          widget: "list"
-          fields:
-            - { label: "ID", name: "id", widget: "string" }
-            - { label: "Name", name: "name", widget: "string" }
-            - { label: "Logo URL", name: "logo", widget: "string" }
+          - label: "Clients"
+            name: "clients"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Logo URL", name: "logo", widget: "image" }
 
-        - label: "Team Members"
-          name: "team"
-          widget: "list"
-          fields:
-            - { label: "ID", name: "id", widget: "string" }
-            - { label: "Name", name: "name", widget: "string" }
-            - label: "Role"
-              name: "role"
-              widget: "object"
-              fields:
-                - { label: "EN", name: "en", widget: "string" }
-                - { label: "IT", name: "it", widget: "string" }
-            - label: "Bio"
-              name: "bio"
-              widget: "object"
-              fields:
-                - { label: "EN", name: "en", widget: "text" }
-                - { label: "IT", name: "it", widget: "text" }
-            - { label: "Photo URL", name: "photo", widget: "image" }
+          - label: "Team Members"
+            name: "team"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - label: "Role"
+                name: "role"
+                widget: "object"
+                fields:
+                  - { label: "EN", name: "en", widget: "string" }
+                  - { label: "IT", name: "it", widget: "string" }
+              - label: "Bio"
+                name: "bio"
+                widget: "object"
+                fields:
+                  - { label: "EN", name: "en", widget: "text" }
+                  - { label: "IT", name: "it", widget: "text" }
+              - { label: "Photo URL", name: "photo", widget: "image" }
