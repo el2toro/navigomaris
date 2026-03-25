@@ -16,7 +16,7 @@ export default function App() {
     <CMSProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/cms-admin" element={<AdminPanel />} />
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
