@@ -1,0 +1,116 @@
+backend:
+  name: git-gateway
+  repo: el2toro/navigomaris
+  branch: main
+
+media_folder: "public/assets/images"
+public_folder: "/images"
+
+collections:
+  - name: "site-content"
+    label: "Site Content"
+    file: "src/content/site-content.json"   # or public/data/site-content.json
+    format: "json"
+    extension: "json"
+    create: false
+    editor:
+      preview: false                        # optional: hide live preview if not needed
+    fields:
+      - label: "Hero"
+        name: "hero"
+        widget: "object"
+        fields:
+          - { label: "Title EN", name: "heroTitle.en", widget: "string" }
+          - { label: "Title IT", name: "heroTitle.it", widget: "string" }
+          - { label: "Subtitle EN", name: "heroSubtitle.en", widget: "text" }
+          - { label: "Subtitle IT", name: "heroSubtitle.it", widget: "text" }
+          - label: "Hero Images"
+            name: "heroImages"
+            widget: "list"
+            fields:
+              - { label: "Image URL", name: "", widget: "string" }
+
+      - label: "About"
+        name: "about"
+        widget: "object"
+        fields:
+          - { label: "Title EN", name: "aboutTitle.en", widget: "string" }
+          - { label: "Title IT", name: "aboutTitle.it", widget: "string" }
+          - { label: "Text EN", name: "aboutText.en", widget: "markdown" }
+          - { label: "Text IT", name: "aboutText.it", widget: "markdown" }
+          - { label: "Mission EN", name: "mission.en", widget: "text" }
+          - { label: "Mission IT", name: "mission.it", widget: "text" }
+
+      - label: "Values"
+        name: "values"
+        widget: "list"
+        fields:
+          - label: "Value"
+            name: "value"
+            widget: "object"
+            fields:
+              - { label: "EN", name: "en", widget: "string" }
+              - { label: "IT", name: "it", widget: "string" }
+
+      - label: "Services"
+        name: "services"
+        widget: "list"
+        fields:
+          - { label: "ID", name: "id", widget: "string" }
+          - { label: "Slug", name: "slug", widget: "string" }
+          - label: "Title"
+            name: "title"
+            widget: "object"
+            fields:
+              - { label: "EN", name: "en", widget: "string" }
+              - { label: "IT", name: "it", widget: "string" }
+          - label: "Short Description"
+            name: "shortDesc"
+            widget: "object"
+            fields:
+              - { label: "EN", name: "en", widget: "text" }
+              - { label: "IT", name: "it", widget: "text" }
+          - label: "Full Description"
+            name: "fullDesc"
+            widget: "object"
+            fields:
+              - { label: "EN", name: "en", widget: "markdown" }
+              - { label: "IT", name: "it", widget: "markdown" }
+          - label: "Benefits"
+            name: "benefits"
+            widget: "list"
+            fields:
+              - label: "Benefit"
+                name: "benefit"
+                widget: "object"
+                fields:
+                  - { label: "EN", name: "en", widget: "string" }
+                  - { label: "IT", name: "it", widget: "string" }
+          - label: "Capabilities"
+            name: "capabilities"
+            widget: "list"
+            fields: [...]   # same pattern as benefits
+          - { label: "Hero Image", name: "heroImage", widget: "string" }
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            fields:
+              - { label: "Image URL", name: "", widget: "string" }
+          - { label: "Icon", name: "icon", widget: "string" }
+          - { label: "Color", name: "color", widget: "string" }
+
+      # Repeat similar structure for "projects", "clients", "team", "contactInfo", "seoTitle", etc.
+
+      - label: "SEO Title"
+        name: "seoTitle"
+        widget: "object"
+        fields:
+          - { label: "EN", name: "en", widget: "string" }
+          - { label: "IT", name: "it", widget: "string" }
+
+      - label: "SEO Description"
+        name: "seoDescription"
+        widget: "object"
+        fields:
+          - { label: "EN", name: "en", widget: "text" }
+          - { label: "IT", name: "it", widget: "text" }
