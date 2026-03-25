@@ -8,7 +8,10 @@
     "it": "Competenza navale, rope access, costruzioni e saldatura — eseguiti con precisione su terra e mare."
   },
   "heroImages": [
-   "wonder_of_the_seas.jpg", "cloche_d_or.jpg", "", "icon_of_the_seas.jpg", "msc_grandiosa.jpg"
+   "/images/uploads/wonder_of_the_seas.jpg", 
+   "/images/uploads/cloche_d_or.jpg", 
+   "/images/uploads/icon_of_the_seas.jpg", 
+   "/images/uploads/msc_grandiosa.jpg"
   ],
   "aboutTitle": {
     "en": "About MarinePro",
@@ -350,8 +353,7 @@
       "serviceCategory": "naval",
       "year": 2023,
       "images": [
-        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
-        "https://images.unsplash.com/photo-1568454537842-d933259bb258?w=800&q=80"
+        "/public/images/uploads/carnival_celebration.jpg"
       ],
       "featured": true,
       "client": "Naples Port Authority"
@@ -370,7 +372,7 @@
       "serviceCategory": "rope",
       "year": 2023,
       "images": [
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+         "/public/images/uploads/carnival_horizon.jpg"
       ],
       "featured": true,
       "client": "Enel Green Power"
@@ -389,8 +391,7 @@
       "serviceCategory": "welding",
       "year": 2022,
       "images": [
-        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80",
-        "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80"
+         "/public/images/uploads/celebrity_ascent.jpg"
       ],
       "featured": true,
       "client": "ENI S.p.A."
@@ -409,8 +410,7 @@
       "serviceCategory": "construction",
       "year": 2022,
       "images": [
-        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80",
-        "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80"
+         "/public/images/uploads/celebrity_beyond.jpg"
       ],
       "featured": false,
       "client": "Port Authority of Genova"
@@ -429,7 +429,7 @@
       "serviceCategory": "rope",
       "year": 2023,
       "images": [
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80"
+         "/public/images/uploads/cloche_d_or.jpg"
       ],
       "featured": false,
       "client": "Autostrade per l'Italia"
@@ -448,8 +448,7 @@
       "serviceCategory": "naval",
       "year": 2021,
       "images": [
-        "https://images.unsplash.com/photo-1568454537842-d933259bb258?w=800&q=80",
-        "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800&q=80"
+         "/public/images/uploads/costa_smeralda.jpg"
       ],
       "featured": false,
       "client": "Marina Militare Italiana"

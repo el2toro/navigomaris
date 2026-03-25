@@ -156,7 +156,7 @@ collections:
               name: "images"
               widget: "list"
               fields:
-                - { label: "Image URL", name: "", widget: "string" }
+                - { label: "Image URL", name: "", widget: "image" }
             - { label: "Featured", name: "featured", widget: "boolean" }
             - { label: "Client", name: "client", widget: "string" }
 
@@ -186,4 +186,4 @@ collections:
               fields:
                 - { label: "EN", name: "en", widget: "text" }
                 - { label: "IT", name: "it", widget: "text" }
-            - { label: "Photo URL", name: "photo", widget: "string" }
+            - { label: "Photo URL", name: "photo", widget: "image" }
