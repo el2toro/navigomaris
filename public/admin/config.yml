@@ -18,32 +18,52 @@ collections:
         create: false
         delete: false
         editor:
-          preview: false                     # Set to true only if you create a preview template
+          preview: false
         fields:
           - label: "Hero Section"
             name: "hero"
             widget: "object"
             fields:
-              - { label: "Hero Title (EN)", name: "heroTitle.en", widget: "string", required: true }
-              - { label: "Hero Title (IT)", name: "heroTitle.it", widget: "string", required: true }
-              - { label: "Hero Subtitle (EN)", name: "heroSubtitle.en", widget: "text" }
-              - { label: "Hero Subtitle (IT)", name: "heroSubtitle.it", widget: "text" }
+              - label: "Hero Title"
+                name: "heroTitle"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string", required: true }
+                  - { label: "Italian", name: "it", widget: "string", required: true }
+              - label: "Hero Subtitle"
+                name: "heroSubtitle"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "text" }
+                  - { label: "Italian", name: "it", widget: "text" }
               - label: "Hero Images"
                 name: "heroImages"
                 widget: "list"
                 fields:
-                  - { label: "Image URL", name: "", widget: "image" }   # Better widget for uploads
+                  - { label: "Image", name: "url", widget: "image" }
 
           - label: "About Section"
             name: "about"
             widget: "object"
             fields:
-              - { label: "About Title (EN)", name: "aboutTitle.en", widget: "string" }
-              - { label: "About Title (IT)", name: "aboutTitle.it", widget: "string" }
-              - { label: "About Text (EN)", name: "aboutText.en", widget: "markdown" }
-              - { label: "About Text (IT)", name: "aboutText.it", widget: "markdown" }
-              - { label: "Mission (EN)", name: "mission.en", widget: "text" }
-              - { label: "Mission (IT)", name: "mission.it", widget: "text" }
+              - label: "About Title"
+                name: "aboutTitle"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Italian", name: "it", widget: "string" }
+              - label: "About Text"
+                name: "aboutText"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "markdown" }
+                  - { label: "Italian", name: "it", widget: "markdown" }
+              - label: "Mission"
+                name: "mission"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "text" }
+                  - { label: "Italian", name: "it", widget: "text" }
 
           - label: "Values"
             name: "values"
@@ -53,17 +73,25 @@ collections:
                 name: "value"
                 widget: "object"
                 fields:
-                  - { label: "EN", name: "en", widget: "string" }
-                  - { label: "IT", name: "it", widget: "string" }
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Italian", name: "it", widget: "string" }
 
           - label: "SEO"
             name: "seo"
             widget: "object"
             fields:
-              - { label: "SEO Title (EN)", name: "seoTitle.en", widget: "string" }
-              - { label: "SEO Title (IT)", name: "seoTitle.it", widget: "string" }
-              - { label: "SEO Description (EN)", name: "seoDescription.en", widget: "text" }
-              - { label: "SEO Description (IT)", name: "seoDescription.it", widget: "text" }
+              - label: "SEO Title"
+                name: "seoTitle"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Italian", name: "it", widget: "string" }
+              - label: "SEO Description"
+                name: "seoDescription"
+                widget: "object"
+                fields:
+                  - { label: "English", name: "en", widget: "text" }
+                  - { label: "Italian", name: "it", widget: "text" }
 
           - label: "Contact Info"
             name: "contactInfo"
@@ -75,8 +103,8 @@ collections:
                 name: "address"
                 widget: "object"
                 fields:
-                  - { label: "EN", name: "en", widget: "string" }
-                  - { label: "IT", name: "it", widget: "string" }
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Italian", name: "it", widget: "string" }
               - { label: "Google Map Embed URL", name: "mapEmbed", widget: "string" }
 
           - label: "Services"
@@ -89,20 +117,20 @@ collections:
                 name: "title"
                 widget: "object"
                 fields:
-                  - { label: "EN", name: "en", widget: "string" }
-                  - { label: "IT", name: "it", widget: "string" }
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Italian", name: "it", widget: "string" }
               - label: "Short Description"
                 name: "shortDesc"
                 widget: "object"
                 fields:
-                  - { label: "EN", name: "en", widget: "text" }
-                  - { label: "IT", name: "it", widget: "text" }
+                  - { label: "English", name: "en", widget: "text" }
+                  - { label: "Italian", name: "it", widget: "text" }
               - label: "Full Description"
                 name: "fullDesc"
                 widget: "object"
                 fields:
-                  - { label: "EN", name: "en", widget: "markdown" }
-                  - { label: "IT", name: "it", widget: "markdown" }
+                  - { label: "English", name: "en", widget: "markdown" }
+                  - { label: "Italian", name: "it", widget: "markdown" }
               - label: "Benefits"
                 name: "benefits"
                 widget: "list"
@@ -111,8 +139,8 @@ collections:
                     name: "benefit"
                     widget: "object"
                     fields:
-                      - { label: "EN", name: "en", widget: "string" }
-                      - { label: "IT", name: "it", widget: "string" }
+                      - { label: "English", name: "en", widget: "string" }
+                      - { label: "Italian", name: "it", widget: "string" }
               - label: "Capabilities"
                 name: "capabilities"
                 widget: "list"
@@ -121,14 +149,14 @@ collections:
                     name: "capability"
                     widget: "object"
                     fields:
-                      - { label: "EN", name: "en", widget: "string" }
-                      - { label: "IT", name: "it", widget: "string" }
+                      - { label: "English", name: "en", widget: "string" }
+                      - { label: "Italian", name: "it", widget: "string" }
               - { label: "Hero Image", name: "heroImage", widget: "image" }
               - label: "Gallery Images"
                 name: "images"
                 widget: "list"
                 fields:
-                  - { label: "Image URL", name: "", widget: "image" }
+                  - { label: "Image", name: "url", widget: "image" }
               - { label: "Icon Name", name: "icon", widget: "string" }
               - { label: "Color (Hex)", name: "color", widget: "string" }
 
@@ -141,14 +169,14 @@ collections:
                 name: "title"
                 widget: "object"
                 fields:
-                  - { label: "EN", name: "en", widget: "string" }
-                  - { label: "IT", name: "it", widget: "string" }
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Italian", name: "it", widget: "string" }
               - label: "Description"
                 name: "description"
                 widget: "object"
                 fields:
-                  - { label: "EN", name: "en", widget: "text" }
-                  - { label: "IT", name: "it", widget: "text" }
+                  - { label: "English", name: "en", widget: "text" }
+                  - { label: "Italian", name: "it", widget: "text" }
               - { label: "Location", name: "location", widget: "string" }
               - { label: "Service Category", name: "serviceCategory", widget: "string" }
               - { label: "Year", name: "year", widget: "number" }
@@ -156,7 +184,7 @@ collections:
                 name: "images"
                 widget: "list"
                 fields:
-                  - { label: "Image URL", name: "", widget: "image" }
+                  - { label: "Image", name: "url", widget: "image" }
               - { label: "Featured", name: "featured", widget: "boolean" }
               - { label: "Client", name: "client", widget: "string" }
 
@@ -166,7 +194,7 @@ collections:
             fields:
               - { label: "ID", name: "id", widget: "string" }
               - { label: "Name", name: "name", widget: "string" }
-              - { label: "Logo URL", name: "logo", widget: "image" }
+              - { label: "Logo", name: "logo", widget: "image" }
 
           - label: "Team Members"
             name: "team"
@@ -178,12 +206,12 @@ collections:
                 name: "role"
                 widget: "object"
                 fields:
-                  - { label: "EN", name: "en", widget: "string" }
-                  - { label: "IT", name: "it", widget: "string" }
+                  - { label: "English", name: "en", widget: "string" }
+                  - { label: "Italian", name: "it", widget: "string" }
               - label: "Bio"
                 name: "bio"
                 widget: "object"
                 fields:
-                  - { label: "EN", name: "en", widget: "text" }
-                  - { label: "IT", name: "it", widget: "text" }
-              - { label: "Photo URL", name: "photo", widget: "image" }
+                  - { label: "English", name: "en", widget: "text" }
+                  - { label: "Italian", name: "it", widget: "text" }
+              - { label: "Photo", name: "photo", widget: "image" }
