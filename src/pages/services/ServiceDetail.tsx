@@ -18,7 +18,7 @@ export default function ServiceDetail() {
     ? s.heroImage = civilEngineeringHeroImageUrl 
     : s.id === 'rope' ? s.heroImage = ropeAccessHeroImageUrl 
     : s.id === 'carpentry' ? s.heroImage = carpentryHeroImageUrl
-    : s.id === 'naval-marine' ? s.heroImage = navalHeroImageUrl
+    : s.id === 'naval' ? s.heroImage = navalHeroImageUrl
     : '');
 
   const service = content.services.find(s => s.slug === slug);
