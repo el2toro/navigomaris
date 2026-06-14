@@ -1,34 +1,85 @@
 import React, { useState } from 'react';
 import { useCMS } from '../hooks/useCMS';
+import { getPublicUrl } from '../utils/supabase';
 
-type Filter = 'all' | 'naval' | 'rope' | 'construction' | 'welding';
+type Filter = 'all' | 'naval' | 'rope' | 'civil-engineering' | 'carpentry';
 
 export default function Projects() {
   const { content, t } = useCMS();
   const [filter, setFilter] = useState<Filter>('all');
   const [selected, setSelected] = useState<string | null>(null);
 
+  const heroImageUrl = getPublicUrl('projects/projects_hero.jpg');
+
+  const costaSmeraldaUrl = getPublicUrl('projects/costa_smeralda.jpg');
+  const mscGrandiosaUrl = getPublicUrl('projects/msc_grandiosa.jpeg');
+  const mscVirtuosaUrl = getPublicUrl('projects/msc_virtuosa.jpg');
+  const celebrityBeyondUrl = getPublicUrl('projects/celebrity_beyond.jpg');
+  const wonderOfTheSeasUrl = getPublicUrl('projects/wonder_of_the_seas.jpg');  
+  
+  const mardiGrasUrl = getPublicUrl('projects/mardi_gras.jpg'); 
+  const mardiGras1Url = getPublicUrl('projects/mardi_gras1.jpg');
+  const worldEuropaUrl = getPublicUrl('projects/msc_world_europa.jpg');
+  const carnivalCelebrationUrl = getPublicUrl('projects/carnival_celebration.jpg');
+  const mscEuribiaUrl = getPublicUrl('projects/msc_euribia.jpg');
+  const iconOfTheSeasUrl = getPublicUrl('projects/icon_of_the_seas.jpg');
+  const celebrityAscentUrl = getPublicUrl('projects/celebrity_ascent.jpg');
+
+  const cityRingUrl = getPublicUrl('projects/sky_light_metropolitan.jpg');
+   const clocheDorUrl = getPublicUrl('projects/cloche_d_or.jpg');
+   const torreMervilleUrl = getPublicUrl('projects/torre_merville_jesolo.jpg');
+   const torreMerville1Url = getPublicUrl('projects/torre_merville_jesolo_2.jpg');
+    const torreIntesaSanPaoloUrl = getPublicUrl('projects/torre_intesa_san_paolo_torino.jpg');
+
+  const justicePalaceUrl = getPublicUrl('projects/justice-palace-tbilisi.jpg');
+  const justicePalace1Url = getPublicUrl('projects/justice-palace-tbilisi-1.jpg');
+  const justicePalace2Url = getPublicUrl('projects/justice-palace-tbilisi-2.jpg');
+  const justicePalace3Url = getPublicUrl('projects/justice-palace-tbilisi-3.jpg');
+  
+  content.projects.map(p => p.id === 'p1' ? p.images[0] = costaSmeraldaUrl : p);
+  content.projects.map(p => p.id === 'p2' ? p.images[0] = iconOfTheSeasUrl : p);
+  content.projects.map(p => p.id === 'p3' ? p.images[0] = celebrityAscentUrl : p);
+  content.projects.map(p => p.id === 'p4' ? p.images[0] = celebrityBeyondUrl : p);
+  content.projects.map(p => p.id === 'p5' ? p.images[0] = wonderOfTheSeasUrl : p);
+  content.projects.map(p => p.id === 'p6' ? p.images[0] = mardiGrasUrl : p);
+  content.projects.map(p => p.id === 'p6' ? p.images[1] = mardiGras1Url : p);
+  content.projects.map(p => p.id === 'p7' ? p.images[0] = worldEuropaUrl : p);
+  content.projects.map(p => p.id === 'p8' ? p.images[0] = carnivalCelebrationUrl : p);
+  content.projects.map(p => p.id === 'p9' ? p.images[0] = mscEuribiaUrl : p);
+  content.projects.map(p => p.id === 'p10' ? p.images[0] = mscGrandiosaUrl : p);
+  content.projects.map(p => p.id === 'p11' ? p.images[0] = mscVirtuosaUrl: p);
+
+  content.projects.map(p => p.id === 'p12' ? p.images[0] = cityRingUrl: p);
+  content.projects.map(p => p.id === 'p13' ? p.images[0] = clocheDorUrl: p);
+  content.projects.map(p => p.id === 'p14' ? p.images = [torreMervilleUrl, torreMerville1Url]: p);
+  content.projects.map(p => p.id === 'p15' ? p.images[0] = torreIntesaSanPaoloUrl: p);
+
+  content.projects.map(p => p.id === 'p16' ? p.images = [justicePalaceUrl, justicePalace1Url, justicePalace2Url, justicePalace3Url]: p);
+
+
   const filters: { key: Filter; label: { en: string; it: string } }[] = [
     { key: 'all', label: { en: 'All Projects', it: 'Tutti i Progetti' } },
     { key: 'naval', label: { en: 'Naval & Marine', it: 'Navale e Marittimo' } },
-    { key: 'rope', label: { en: 'Rope Access', it: 'Rope Access' } },
-    { key: 'construction', label: { en: 'Construction', it: 'Costruzioni' } },
-    { key: 'welding', label: { en: 'Welding', it: 'Saldatura' } },
+    { key: 'rope', label: { en: 'Rope Access', it: 'Lavori con Corda' } },
+    { key: 'civil-engineering', label: { en: 'Civil Engineering Works', it: 'Lavori di Ingegneria Civile' } },
+    { key: 'carpentry', label: { en: 'Carpentry', it: 'Falegnameria' } },
   ];
 
-  const catColors: Record<string, string> = { naval: 'badge-naval', rope: 'badge-rope', construction: 'badge-construction', welding: 'badge-welding' };
+  const catColors: Record<string, string> = { naval: 'badge-naval', rope: 'badge-rope', 'civil-engineering': 'badge-civil-engineering', carpentry: 'badge-carpentry' };
   const catLabel: Record<string, { en: string; it: string }> = {
-    naval: { en: 'Naval', it: 'Navale' }, rope: { en: 'Rope Access', it: 'Rope Access' },
-    construction: { en: 'Construction', it: 'Costruzioni' }, welding: { en: 'Welding', it: 'Saldatura' }
+    naval: { en: 'Naval', it: 'Navale' }, 
+    rope: { en: 'Rope Access', it: 'Lavori in Corda' },
+    'civil-engineering': { en: 'Civil Engineering Works', it: 'Lavori di Ingegneria Civile' }, 
+    carpentry: { en: 'Carpentry', it: 'Carpenteria' }
   };
-
+  
   const filtered = filter === 'all' ? content.projects : content.projects.filter(p => p.serviceCategory === filter);
   const selectedProject = content.projects.find(p => p.id === selected);
 
   return (
     <>
       <div className="page-hero">
-        <img className="page-hero__bg" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=80" alt="" />
+        <img className="page-hero__bg" src={heroImageUrl} alt="" />
         <div className="page-hero__overlay" />
         <div className="container page-hero__content">
           <div className="section-label light">{t({ en: 'Our Work', it: 'Il Nostro Lavoro' })}</div>

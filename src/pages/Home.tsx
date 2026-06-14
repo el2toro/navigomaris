@@ -1,12 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useCMS } from '../hooks/useCMS';
 import { ArrowRight, Anchor, Phone, Mail, ChevronRight } from 'lucide-react';
+import supabase, { getPublicUrl } from '../utils/supabase';
+
+const celebrityBeyondUrl = getPublicUrl('hero/celebrity_beyond.jpg');
+const wonderOfTheSeasUrl = getPublicUrl('hero/wonder_of_the_seas.jpg');
+const clocheDorUrl = getPublicUrl('hero/cloche_d_or.jpg');
+const iconOfTheSeasUrl = getPublicUrl('hero/icon_of_the_seas.jpg');
+
+const navalIconUrl = getPublicUrl('icons/cruise_ship.svg');
+const ropeIconUrl = getPublicUrl('icons/climbing.svg');
+const civilEngineeringIconUrl = getPublicUrl('icons/helmet_construction.svg');
+const carpentryIconUrl = getPublicUrl('icons/welder.svg');
+
+const navalServiceUrl = getPublicUrl('services/marine_service.avif');
+const ropeServiceUrl = getPublicUrl('services/rope_acces_service.avif');
+const civilEngineeringServiceUrl = getPublicUrl('services/construction_service.avif');
+const carpentryServiceUrl = getPublicUrl('services/carpentry_service.jpg');
+
+const alumetalClientUrl = getPublicUrl('clients/alu-metal.png');
+const azaClientUrl = getPublicUrl('clients/aza.png');
+const intercomClientUrl = getPublicUrl('clients/intercom.png');
+const marineClientUrl = getPublicUrl('clients/marine.png');
+const somecClientUrl = getPublicUrl('clients/somec.png');
+const jukovaClientUrl = getPublicUrl('clients/jukova.png');
+
+const project1Url = getPublicUrl('projects/costa_smeralda.jpg');
+const project2Url = getPublicUrl('projects/sky_light_metropolitan.jpg');
+const project3Url = getPublicUrl('projects/justice-palace-tbilisi.jpg');
 
 // Hero Slideshow
 function Hero() {
   const { content, t } = useCMS();
   const [current, setCurrent] = useState(0);
+
+  content.heroImages = [wonderOfTheSeasUrl, iconOfTheSeasUrl, celebrityBeyondUrl, clocheDorUrl];
+  content.projects[0].images = [project1Url];
+   content.projects[1].images = [project2Url];
+    content.projects[2].images = [project3Url];
+
+    console.log(project2Url)
 
   useEffect(() => {
     const timer = setInterval(() => setCurrent(p => (p + 1) % content.heroImages.length), 5000);
@@ -154,20 +188,18 @@ function Hero() {
 function StatsBar() {
   const { t } = useCMS();
   const stats = [
-    { num: '20+', label: { en: 'Years Experience', it: 'Anni di Esperienza' } },
-    { num: '350+', label: { en: 'Projects Completed', it: 'Progetti Completati' } },
-    { num: '4', label: { en: 'Core Services', it: 'Servizi Principali' } },
-    { num: '100%', label: { en: 'Safety Record', it: 'Record di Sicurezza' } },
+    { num: '20+', end: 20, suffix: '+', label: { en: 'Years Experience', it: 'Anni di Esperienza' } },
+    { num: '350+', end: 350, suffix: '+', label: { en: 'Projects Completed', it: 'Progetti Completati' } },
+    { num: '4', end: 4, suffix: '', label: { en: 'Core Services', it: 'Servizi Principali' } },
+    { num: '100%', end: 100, suffix: '%', label: { en: 'Safety Record', it: 'Record di Sicurezza' } },
   ];
+
   return (
     <div style={{ background: 'var(--navy)', padding: '48px 0' }}>
       <div className="container">
         <div className="grid-4">
           {stats.map((s, i) => (
-            <div key={i} className="stat-item">
-              <div className="stat-num">{s.num}</div>
-              <div className="stat-label">{t(s.label)}</div>
-            </div>
+            <StatItem key={i} end={s.end} suffix={s.suffix} label={t(s.label)} />
           ))}
         </div>
       </div>
@@ -175,10 +207,63 @@ function StatsBar() {
   );
 }
 
+function StatItem({ end, suffix, label }: { end: number; suffix: string; label: string }) {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          animateCount(end, setCount);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [end, hasAnimated]);
+
+  return (
+    <div ref={ref} className="stat-item">
+      <div className="stat-num">
+        {count}{suffix}
+      </div>
+      <div className="stat-label">{label}</div>
+    </div>
+  );
+}
+
+function animateCount(end: number, setter: (n: number) => void) {
+  const duration = 2800;
+  const startTime = performance.now();
+
+  function tick(now: number) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    // Ease-out cubic
+    const eased = 1 - Math.pow(1 - progress, 3);
+    setter(Math.round(eased * end));
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+
+  requestAnimationFrame(tick);
+}
+
 // Services overview
 function ServicesSection() {
   const { content, t } = useCMS();
-  const icons: Record<string, string> = { naval: '⚓', rope: '🧗', construction: '🏗️', welding: '🔥' };
+
+  const icons: Record<string, string> = { naval: navalIconUrl, rope: ropeIconUrl, 'civil-engineering': civilEngineeringIconUrl, carpentry: carpentryIconUrl };
+  const serviceImages: Record<string, string> = { naval: navalServiceUrl, rope: ropeServiceUrl, 'civil-engineering': civilEngineeringServiceUrl, carpentry: carpentryServiceUrl };
+
+  console.log('Service Images:', civilEngineeringServiceUrl);
 
   return (
     <section className="section" style={{ background: 'var(--off-white)' }}>
@@ -190,10 +275,11 @@ function ServicesSection() {
         <div className="grid-4">
           {content.services.map(service => (
             <Link key={service.id} to={`/services/${service.slug}`} className="service-card">
-              <img src={service.heroImage} alt={t(service.title)} />
+              <img src={serviceImages[service.id]} alt={t(service.title)} />
               <div className="service-card__body">
                 <div className="service-card__icon" style={{ background: service.color + '33', color: service.color }}>
-                  <span style={{ fontSize: 20 }}>{icons[service.id]}</span>
+                  {/* <span style={{ fontSize: 20 }}>{icons[service.id]}</span> */}
+                  <img src={icons[service.id]} alt="" style={{ width: 40, height: 40, padding: 2 }} />
                 </div>
                 <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', color: 'white', letterSpacing: '0.03em', lineHeight: 1.1, marginBottom: 8 }}>
                   {t(service.title)}
@@ -217,10 +303,14 @@ function ServicesSection() {
 function FeaturedProjects() {
   const { content, t } = useCMS();
   const featured = content.projects.filter(p => p.featured).slice(0, 3);
-  const catColors: Record<string, string> = { naval: 'badge-naval', rope: 'badge-rope', construction: 'badge-construction', welding: 'badge-welding' };
+  featured[1].images[0] = project2Url;
+  featured[2].images[0] = project3Url;
+  const catColors: Record<string, string> = { naval: 'badge-naval', rope: 'badge-rope', 'civil-engineering': 'badge-civil-engineering', carpentry: 'badge-carpentry' };
   const catLabels: Record<string, { en: string; it: string }> = {
-    naval: { en: 'Naval', it: 'Navale' }, rope: { en: 'Rope Access', it: 'Rope Access' },
-    construction: { en: 'Construction', it: 'Costruzioni' }, welding: { en: 'Welding', it: 'Saldatura' }
+    naval: { en: 'Naval', it: 'Navale' }, 
+    rope: { en: 'Rope Access', it: 'Lavori in Corda' },
+    'civil-engineering': { en: 'Civil Engineering Works', it: 'Lavori di Ingegneria Civile' }, 
+    carpentry: { en: 'Carpentry', it: 'Carpenteria' }
   };
 
   return (
@@ -256,37 +346,68 @@ function FeaturedProjects() {
   );
 }
 
-// Clients
+//Clients
 function Clients() {
   const { content, t } = useCMS();
+  const clientsLogos: Record<string, string> = { c1: azaClientUrl, c2: somecClientUrl, c3: alumetalClientUrl, c4: marineClientUrl, c5: intercomClientUrl, c6: jukovaClientUrl };
+
+  // Duplicate clients for seamless loop
+  const doubled = [...content.clients, ...content.clients, ...content.clients];
+
   return (
-    <section className="section-sm" style={{ background: 'var(--navy)', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+    <section className="section-sm" style={{ background: 'var(--navy)', borderTop: '1px solid rgba(255,255,255,0.05)', overflow: 'hidden' }}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: 40 }}>
-          <div className="section-label" style={{ justifyContent: 'center' }}>{t({ en: 'Trusted By', it: 'Si Fidano di Noi' })}</div>
+          <div className="section-label" style={{ justifyContent: 'center' }}>
+            {t({ en: 'Trusted By', it: 'Si Fidano di Noi' })}
+          </div>
         </div>
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 32, alignItems: 'center' }}>
-          {content.clients.map(client => (
-            <div key={client.id} style={{
-              padding: '16px 32px',
-              border: '1px solid rgba(255,255,255,0.1)',
+      </div>
+
+      {/* Marquee wrapper */}
+      <div style={{ position: 'relative', overflow: 'hidden' }}>
+        {/* Fade edges */}
+        <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 120, background: 'linear-gradient(to right, var(--navy), transparent)', zIndex: 2, pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', right: 0, top: 0, bottom: 0, width: 120, background: 'linear-gradient(to left, var(--navy), transparent)', zIndex: 2, pointerEvents: 'none' }} />
+
+        <div style={{
+          display: 'flex',
+          gap: 32,
+          width: 'max-content',
+          animation: 'marquee 20s linear infinite',
+        }}
+        >
+          {doubled.map((client, i) => (
+            <div key={`${client.id}-${i}`} style={{
+             
+             
               borderRadius: 'var(--radius)',
-              fontFamily: 'var(--font-condensed)',
-              fontSize: 15,
-              fontWeight: 700,
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.4)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minWidth: 160,
               transition: 'var(--transition)',
-              cursor: 'default'
+              cursor: 'default',
+              flexShrink: 0,
             }}
-              onMouseEnter={e => (e.currentTarget.style.color = 'white')}
-              onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.4)')}>
-              {client.name}
+            >
+              {clientsLogos[client.id]
+                ? <img src={clientsLogos[client.id]} alt={client.name} style={{ width: 120, height: 80, objectFit: 'contain', transition: 'var(--transition)' }}
+                  
+                  />
+                : <span style={{ fontFamily: 'var(--font-condensed)', fontSize: 15, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>{client.name}</span>
+              }
             </div>
           ))}
         </div>
       </div>
+
+      <style>{`
+        @keyframes marquee {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
     </section>
   );
 }
@@ -307,7 +428,7 @@ function CTA() {
         </p>
         <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link to="/contact" className="btn btn-primary">{t({ en: 'Request a Quote', it: 'Richiedi un Preventivo' })} <ArrowRight size={16} /></Link>
-          <a href="tel:+390811234567" className="btn btn-ghost"><Phone size={16} /> +39 081 123 4567</a>
+          <a href="tel:+356 270 12918" className="btn btn-ghost"><Phone size={16} /> +356 270 12918</a>
         </div>
       </div>
     </section>
@@ -336,17 +457,17 @@ function QuickContact() {
               {t({ en: "Have a project in mind? Send us a quick message and our team will respond within 24 hours.", it: "Hai un progetto in mente? Inviaci un messaggio veloce e il nostro team risponderà entro 24 ore." })}
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-              <a href="tel:+390811234567" style={{ display: 'flex', alignItems: 'center', gap: 12, color: 'var(--navy)', fontWeight: 500 }}>
+              <a href="tel:+356 270 12918" style={{ display: 'flex', alignItems: 'center', gap: 12, color: 'var(--navy)', fontWeight: 500 }}>
                 <div style={{ width: 44, height: 44, borderRadius: '50%', background: 'var(--navy)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <Phone size={18} color="white" />
                 </div>
-                +39 081 123 4567
+                +356 270 12918 
               </a>
-              <a href="mailto:info@marinepro.it" style={{ display: 'flex', alignItems: 'center', gap: 12, color: 'var(--navy)', fontWeight: 500 }}>
+              <a href="mailto:info@navigomaris.com" style={{ display: 'flex', alignItems: 'center', gap: 12, color: 'var(--navy)', fontWeight: 500 }}>
                 <div style={{ width: 44, height: 44, borderRadius: '50%', background: 'var(--navy)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   <Mail size={18} color="white" />
                 </div>
-                info@marinepro.it
+                info@navigomaris.com
               </a>
             </div>
           </div>

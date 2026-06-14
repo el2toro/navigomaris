@@ -38,9 +38,38 @@ export default function Contact() {
                 {t({ en: "Our team is available to discuss your project requirements and provide expert guidance on the best approach for your needs.", it: "Il nostro team è disponibile per discutere i requisiti del vostro progetto e fornire una guida esperta sull'approccio migliore per le vostre esigenze." })}
               </p>
 
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginBottom: 24 }}>
+                {[
+                  ...content.contactInfo.phoneContacts.map((phoneContact) => ({
+                    icon: Phone,
+                    label: phoneContact.name.length > 0 ? phoneContact.name + ' - '  + t({ en: phoneContact.role.en, it: phoneContact.role.it }) : t({ en: phoneContact.role.en, it: phoneContact.role.it }),
+                    value: phoneContact.phone,
+                    href: `tel:${phoneContact.phone}`
+                  })),
+          
+                ].map(({ icon: Icon, label, value, href }, i) => (
+                  <div key={i} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
+                    <div style={{ width: 48, height: 48, borderRadius: 'var(--radius)', background: 'var(--navy)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <Icon size={20} color="var(--accent)" />
+                    </div>
+                    <div>
+                      <div style={{ fontFamily: 'var(--font-condensed)', fontSize: 11, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: 4 }}>{label}</div>
+                      {href ? (
+                        <a href={href} style={{ fontWeight: 500, color: 'var(--navy)', fontSize: '1rem', transition: 'color 0.2s' }}
+                          onMouseEnter={e => (e.currentTarget.style.color = 'var(--ocean)')}
+                          onMouseLeave={e => (e.currentTarget.style.color = 'var(--navy)')}>
+                          {value}
+                        </a>
+                      ) : (
+                        <span style={{ fontWeight: 500, color: 'var(--navy)', fontSize: '1rem' }}>{value}</span>
+                      )}
+                    </div>
+                  </div>
+                ))} 
+                </div>
+
               <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
                 {[
-                  { icon: Phone, label: t({ en: 'Phone', it: 'Telefono' }), value: content.contactInfo.phone, href: `tel:${content.contactInfo.phone}` },
                   { icon: Mail, label: 'Email', value: content.contactInfo.email, href: `mailto:${content.contactInfo.email}` },
                   { icon: MapPin, label: t({ en: 'Address', it: 'Indirizzo' }), value: t(content.contactInfo.address), href: '' },
                   { icon: Clock, label: t({ en: 'Hours', it: 'Orari' }), value: t({ en: 'Mon–Fri 8:00–18:00 · Emergency 24/7', it: 'Lun–Ven 8:00–18:00 · Emergenze 24/7' }), href: '' },
@@ -142,8 +171,8 @@ export default function Contact() {
       <section style={{ background: 'var(--off-white)', padding: '0 0 0' }}>
         <div className="map-placeholder" style={{ borderRadius: 0 }}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48387.60076786816!2d14.207611299999999!3d40.8518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b08265aaaaaa%3A0x6da561bba3c4a6c7!2sNaples%2C%20Metropolitan%20City%20of%20Naples%2C%20Italy!5e0!3m2!1sen!2sit!4v1234567890"
-            title="MarinePro Location"
+            src="https://maps.google.com/maps?q=San%20Pietru%20str.%20Flat%202,%20Sylvia%20Court%201083%20Fgura%20FGR%20Malta&z=17&output=embed"
+            title="Navigomaris Location"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

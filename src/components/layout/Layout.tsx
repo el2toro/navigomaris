@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useCMS } from '../../hooks/useCMS';
 import { Globe, Menu, X, Anchor, ChevronDown, Settings } from 'lucide-react';
+import { getPublicUrl } from '../../utils/supabase';
 
 function Header() {
   const { language, setLanguage, t, isAdmin } = useCMS();
@@ -29,8 +30,8 @@ function Header() {
   const services = [
     { slug: 'naval-marine', label: { en: 'Naval & Marine', it: 'Navale e Marittimo' } },
     { slug: 'rope-access', label: { en: 'Rope Access', it: 'Rope Access' } },
-    { slug: 'construction', label: { en: 'Construction', it: 'Costruzioni' } },
-    { slug: 'welding', label: { en: 'Welding', it: 'Saldatura' } },
+    { slug: 'civil-engineering', label: { en: 'Civil Engineering', it: 'Ingegneria Civile' } },
+    { slug: 'carpentry', label: { en: 'Carpentry', it: 'Falegnameria' } },
   ];
 
   const isActive = (href: string) => href === '/' ? location.pathname === '/' : location.pathname.startsWith(href);
@@ -279,6 +280,8 @@ function Header() {
 
 function Footer() {
   const { t } = useCMS();
+  const navogomarisLogoUrl = getPublicUrl('logos/navigo-maris-logo.png');
+
   return (
     <footer style={{ background: 'var(--navy)', color: 'rgba(255,255,255,0.7)', padding: '64px 0 32px' }}>
       <style>{`
@@ -294,21 +297,22 @@ function Footer() {
         <div className="footer-grid">
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-              <div style={{ width: 36, height: 36, background: 'var(--accent)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Anchor size={18} color="var(--navy)" />
+              <div style={{ width: 84, height: 36, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                {/* <Anchor size={18} color="var(--navy)" /> */}
+                <img src={navogomarisLogoUrl} alt="NavigoMaris" style={{ width: 84, height: 36 }} />
               </div>
-              <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.4rem', color: 'white', letterSpacing: '0.04em' }}>MarinePro</span>
+              <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.4rem', color: 'white', letterSpacing: '0.04em' }}>NavigoMaris</span>
             </div>
             <p style={{ fontSize: 14, lineHeight: 1.7, maxWidth: 280 }}>
-              {t({ en: 'Professional marine, rope access, construction and welding services across Italy and internationally.', it: 'Servizi professionali marini, rope access, costruzioni e saldatura in tutta Italia e a livello internazionale.' })}
+              {t({ en: 'Professional marine, rope access, construction and welding services internationally.', it: 'Servizi professionali marini, accessi in corda, costruzioni e saldatura a livello internazionale.' })}
             </p>
           </div>
           <div>
             <div className="footer-heading">{t({ en: 'Services', it: 'Servizi' })}</div>
             <Link to="/services/naval-marine" className="footer-link">{t({ en: 'Naval & Marine', it: 'Navale e Marittimo' })}</Link>
-            <Link to="/services/rope-access" className="footer-link">Rope Access</Link>
-            <Link to="/services/construction" className="footer-link">{t({ en: 'Construction', it: 'Costruzioni' })}</Link>
-            <Link to="/services/welding" className="footer-link">{t({ en: 'Welding', it: 'Saldatura' })}</Link>
+            <Link to="/services/rope-access" className="footer-link">{t({ en: 'Rope Access', it: 'Accessi in Corda' })}</Link>
+            <Link to="/services/civil-engineering" className="footer-link">{t({ en: 'Civil Engineering', it: 'Ingegneria Civile' })}</Link>
+            <Link to="/services/carpentry" className="footer-link">{t({ en: 'Carpentry', it: 'Carpenteria' })}</Link>
           </div>
           <div>
             <div className="footer-heading">{t({ en: 'Company', it: 'Azienda' })}</div>
@@ -318,15 +322,15 @@ function Footer() {
           </div>
           <div>
             <div className="footer-heading">{t({ en: 'Contact', it: 'Contatti' })}</div>
-            <p style={{ fontSize: 14, lineHeight: 1.8 }}>+39 081 123 4567<br />info@marinepro.it<br />{t({ en: 'Via del Porto 42', it: 'Via del Porto 42' })}<br />{t({ en: 'Naples, Italy', it: 'Napoli, Italia' })}</p>
+            <p style={{ fontSize: 14, lineHeight: 1.8 }}>+356 270 12918<br />info@navigomaris.com<br />{t({ en: 'San Pietru str. Flat 2, Sylvia Court, 1083 Fgura FGR', it: 'San Pietru str. Flat 2, Sylvia Court, 1083 Fgura FGR' })}<br />{t({ en: 'Malta', it: 'Malta' })}</p>
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} MarinePro S.r.l. — {t({ en: 'All rights reserved', it: 'Tutti i diritti riservati' })}</span>
+          <span>© {new Date().getFullYear()} NavigoMaris LTD — {t({ en: 'All rights reserved', it: 'Tutti i diritti riservati' })}</span>
           <button
             onClick={() => {
               const pass = prompt('Admin password:');
-              if (pass === 'admin123') { localStorage.setItem('marinepro_admin', 'true'); window.location.href = '/admin'; }
+              if (pass === 'admin123') { localStorage.setItem('navigomaris_admin', 'true'); window.location.href = '/admin'; }
             }}
             style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)', cursor: 'pointer', background: 'none', border: 'none', fontFamily: 'var(--font-body)' }}
           >

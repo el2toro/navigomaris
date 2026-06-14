@@ -7,20 +7,7 @@
     "en": "Naval expertise, rope access, construction, and welding — delivered with precision across land and sea.",
     "it": "Competenza navale, rope access, costruzioni e saldatura — eseguiti con precisione su terra e mare."
   },
-  "heroImages": [
-    {
-      "url": "/images/uploads/wonder_of_the_seas.jpg"
-    },
-    {
-      "url": "/images/uploads/cloche_d_or.jpg"
-    },
-    {
-      "url": "/images/uploads/icon_of_the_seas.jpg"
-    },
-    {
-      "url": "/images/uploads/msc_grandiosa.jpeg"
-    }
-  ],
+  "heroImages": [],
   "clients": [
     {
       "logo": "/images/uploads/somec.png",
@@ -55,136 +42,394 @@
   ],
   "projects": [
     {
-      "client": "Naples Port Authority",
+      "client": "Somec",
       "featured": true,
       "images": [
         "/public/images/uploads/carnival_celebration.jpg"
       ],
-      "year": 2023,
+      "year": "2018 - 2019",
       "serviceCategory": "naval",
-      "location": "Naples, Italy",
+      "location": "Turku, Finland",
       "description": {
-        "it": "Campagna completa di ispezione e pulizia dello scafo subacqueo per 12 navi commerciali all'Autorità Portuale di Napoli. Utilizzo di tecnologia ROV avanzata in combinazione con team di subacquei per una valutazione completa.",
-        "en": "Complete underwater hull inspection and cleaning campaign for 12 commercial vessels at Naples Port Authority. Utilized advanced ROV technology combined with diver teams for comprehensive assessment."
+        "it": "",
+        "en": ""
       },
       "title": {
-        "it": "Campagna di Ispezione Scafi Porto di Napoli",
-        "en": "Port of Naples Hull Inspection Campaign"
+        "it": "Costa Smeralda NB1394 CM102",
+        "en": "Costa Smeralda NB1394 CM102"
       },
       "id": "p1"
     },
-    {
-      "client": "Enel Green Power",
-      "featured": true,
+       {
+      "client": "Somec",
+      "featured": false,
       "images": [
-        "/public/images/uploads/carnival_horizon.jpg"
+        "/public/images/uploads/costa_smeralda.jpg"
       ],
-      "year": 2023,
-      "serviceCategory": "rope",
-      "location": "Adriatic Sea, Italy",
+      "year": 2022,
+      "serviceCategory": "naval",
+      "location": "Turku, Finland",
       "description": {
-        "it": "Programma di ispezione e manutenzione rope access su 24 strutture di turbine eoliche nel Mar Adriatico. I lavori includevano valutazione della corrosione, riparazione del rivestimento e ispezione dei bulloni strutturali.",
-        "en": "Rope access inspection and maintenance program across 24 wind turbine structures in the Adriatic Sea. Works included corrosion assessment, coating repair, and structural bolt inspection."
+        "it": "",
+        "en": ""
       },
       "title": {
-        "it": "Manutenzione Parco Eolico Offshore — Adriatico",
-        "en": "Offshore Wind Farm Maintenance — Adriatic"
+        "it": "RCCL Icon of the Seas CM144",
+        "en": "RCCL Icon of the Seas CM144"
       },
       "id": "p2"
     },
     {
-      "client": "ENI S.p.A.",
-      "featured": true,
+      "client": "Somec",
+      "featured": false,
       "images": [
-        "/public/images/uploads/celebrity_ascent.jpg"
+        "/public/images/uploads/costa_smeralda.jpg"
       ],
-      "year": 2022,
-      "serviceCategory": "welding",
-      "location": "Milazzo, Sicily",
+      "year": 2023,
+      "serviceCategory": "naval",
+      "location": "Saint-Nazaire, France",
       "description": {
-        "it": "Lavori di saldatura e fabbricazione durante lo shutdown programmato presso una grande raffineria di petrolio in Sicilia. Un team di 18 saldatori certificati ha completato 2.400m di saldature su tubazioni secondo lo standard AWS D1.1 in 6 settimane.",
-        "en": "Planned shutdown welding and fabrication works at a major oil refinery in Sicily. Team of 18 certified welders completed 2,400m of pipeline welds to AWS D1.1 standard over 6 weeks."
+        "it": "",
+        "en": ""
       },
       "title": {
-        "it": "Shutdown Saldatura Raffineria Industriale",
-        "en": "Industrial Refinery Welding Shutdown"
+        "it": "RCCL Celebrity Ascent  M34",
+        "en": "RCCL Celebrity Ascent  M34"
       },
       "id": "p3"
     },
     {
-      "client": "Port Authority of Genova",
+      "client": "Somec",
       "featured": false,
       "images": [
         "/public/images/uploads/celebrity_beyond.jpg"
       ],
-      "year": 2022,
-      "serviceCategory": "construction",
-      "location": "Genoa, Italy",
+      "year": "2020 - 2022",
+      "serviceCategory": "naval",
+      "location": "Saint-Nazaire, France",
       "description": {
-        "it": "Ristrutturazione completa di 340m di banchina portuale inclusa riparazione del calcestruzzo, impermeabilizzazione, sostituzione dei parabordi e installazione di hardware di ormeggio al porto commerciale di Genova.",
-        "en": "Comprehensive refurbishment of 340m of quay wall including concrete repair, waterproofing, fendering replacement, and mooring hardware installation at Genoa commercial harbour."
+        "it": "",
+        "en": ""
       },
       "title": {
-        "it": "Ristrutturazione Banchina Portuale",
-        "en": "Harbour Quay Wall Refurbishment"
+        "it": "RCCL Celebrity Beyond L34",
+        "en": "RCCL Celebrity Beyond L34"
       },
       "id": "p4"
     },
     {
-      "client": "Autostrade per l'Italia",
+      "client": "Somec",
       "featured": false,
       "images": [
         "/public/images/uploads/cloche_d_or.jpg"
       ],
-      "year": 2023,
-      "serviceCategory": "rope",
-      "location": "Florence, Italy",
+      "year": "2020 - 2021",
+      "serviceCategory": "naval",
+      "location": "Saint-Nazaire, France",
       "description": {
-        "it": "Ispezione rope access di 8 campate di ponte autostradale che coprono 1,2km di struttura viadotto. I lavori includevano ispezione visiva, mappatura delle fessure, test di carbonatazione e valutazione della corrosione delle armature.",
-        "en": "Rope access inspection of 8 motorway bridge spans covering 1.2km of viaduct structure. Works included visual inspection, crack mapping, carbonation testing, and rebar corrosion assessment."
+        "it": "",
+        "en": ""
       },
       "title": {
-        "it": "Ispezione Ponte — Viadotto Autostrada A1",
-        "en": "Bridge Inspection — A1 Motorway Viaduct"
+        "it": "RCCL Wonder of the Seas C34",
+        "en": "RCCL Wonder of the Seas C34"
       },
       "id": "p5"
     },
     {
-      "client": "Marina Militare Italiana",
+      "client": "Somec",
+      "featured": false,
+      "images": [
+        "/public/images/uploads/costa_smeralda.jpg"
+      ],
+      "year": 2020,
+      "serviceCategory": "naval",
+      "location": "Turku, Finland",
+      "description": {
+        "it": "",
+        "en": ""
+      },
+      "title": {
+        "it": "NB 1396 Mardi Gras CM128 ",
+        "en": "NB 1396 Mardi Gras CM128 "
+      },
+      "id": "p6"
+    },
+    {
+      "client": "Somec",
+      "featured": false,
+      "images": [
+        "/public/images/uploads/costa_smeralda.jpg"
+      ],
+      "year": 2023,
+      "serviceCategory": "naval",
+      "location": "Saint-Nazaire, France",
+      "description": {
+        "it": "",
+        "en": ""
+      },
+      "title": {
+        "it": "MSC World Europa W34  ",
+        "en": "MSC World Europa W34  "
+      },
+      "id": "p7"
+    },
+    {
+      "client": "Somec",
       "featured": false,
       "images": [
         "/public/images/uploads/costa_smeralda.jpg"
       ],
       "year": 2021,
       "serviceCategory": "naval",
-      "location": "Taranto, Italy",
+      "location": "Turku, Finland",
       "description": {
-        "it": "Revisione completa in bacino di carenaggio inclusa sabbiatura e verniciatura dello scafo, ispezione delle casse mare, estrazione e perizia dell'asse dell'elica, sostituzione degli anodi e riparazioni saldate alla struttura della chiglia.",
-        "en": "Full dry-dock overhaul including hull blasting and painting, sea-chest inspection, propeller shaft extraction and survey, anode replacement, and welding repairs to the keel structure."
+        "it": "",
+        "en": ""
       },
       "title": {
-        "it": "Revisione In Bacino di Carenaggio Nave Militare",
-        "en": "Naval Vessel Dry-Dock Overhaul"
+        "it": "MNB 1397 Carnival Celebration CM129   ",
+        "en": "NB 1397 Carnival Celebration CM129   "
       },
-      "id": "p6"
-    }
+      "id": "p8"
+    },
+    {
+      "client": "Somec",
+      "featured": false,
+      "images": [
+        "/public/images/uploads/costa_smeralda.jpg"
+      ],
+      "year": 2022,
+      "serviceCategory": "naval",
+      "location": "Turku, Finland",
+      "description": {
+        "it": "",
+        "en": ""
+      },
+      "title": {
+        "it": "MSC Euribia V34",
+        "en": "MSC Euribia V34"
+      },
+      "id": "p9"
+    },
+     {
+      "client": "Somec",
+      "featured": false,
+      "images": [
+        "/public/images/uploads/carnival_horizon.jpg"
+      ],
+      "year": "2019 - 2020",
+      "serviceCategory": "naval",
+      "location": "Saint-Nazaire, France",
+      "description": {
+        "it": "",
+        "en": ""
+      },
+      "title": {
+        "it": "MSC Grandiosa G34",
+        "en": "MSC Grandiosa G34"
+      },
+      "id": "p10"
+    },
+    {
+      "client": "Somec",
+      "featured": false,
+      "images": [
+        "/public/images/uploads/celebrity_ascent.jpg"
+      ],
+      "year": "2019 - 2020",
+      "serviceCategory": "naval",
+      "location": "Saint-Nazaire, France",
+      "description": {
+        "it": "",
+        "en": ""
+      },
+      "title": {
+        "it": "MSC Virtuosa H34 ",
+        "en": "MSC Virtuosa H34 "
+      },
+      "id": "p11"
+    },
+      {
+        "client": "AZA",
+        "featured": true,
+        "images": [
+          "/public/images/uploads/costa_smeralda.jpg"
+        ],
+        "year": "2018 - 2019",
+        "serviceCategory": "civil-engineering",
+        "location": "Copenhagen, Denmark",
+        "description": {
+          "it": "",
+          "en": ""
+        },
+        "title": {
+          "it": "City Ring, The Metropolitan",
+          "en": "City Ring, The Metropolitan"
+        },
+        "id": "p12"
+      },
+      {
+        "client": "Alumetal",
+        "featured": true,
+        "images": [
+          "/public/images/uploads/costa_smeralda.jpg"
+        ],
+        "year": "",
+        "serviceCategory": "civil-engineering",
+        "location": "Luxembourg, Belgium",
+        "description": {
+          "it": "",
+          "en": ""
+        },
+        "title": {
+          "it": "La cloche d'or",
+          "en": "La cloche d'or"
+        },
+        "id": "p13"
+      },
+      {
+        "client": "",
+        "featured": false,
+        "images": [
+          "/public/images/uploads/costa_smeralda.jpg"
+        ],
+        "year": "",
+        "serviceCategory": "civil-engineering",
+        "location": "Jesolo, Italy",
+        "description": {
+          "it": "",
+          "en": ""
+        },
+        "title": {
+          "it": "Torre Merville",
+          "en": "Torre Merville"
+        },
+        "id": "p14"
+      },
+      {
+        "client": "",
+        "featured": false,
+        "images": [
+          "/public/images/uploads/costa_smeralda.jpg"
+        ],
+        "year": "",
+        "serviceCategory": "civil-engineering",
+        "location": "Torino, Italy",
+        "description": {
+          "it": "",
+          "en": ""
+        },
+        "title": {
+          "it": "Torre Intesa San Paolo",
+          "en": "Torre Intesa San Paolo"
+        },
+        "id": "p15"
+      },
+      {
+        "client": "",
+        "featured": true,
+        "images": [
+          "/public/images/uploads/costa_smeralda.jpg"
+        ],
+        "year": "",
+        "serviceCategory": "civil-engineering",
+        "location": "Tbilisi, Georgia",
+        "description": {
+          "it": "",
+          "en": ""
+        },
+        "title": {
+          "it": "Palace of Justice",
+          "en": "Palace of Justice"
+        },
+        "id": "p16"
+      }
   ],
   "contactInfo": {
     "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.0!2d14.2681!3d40.8518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDUxJzA2LjUiTiAxNMKwMTYnMDUuMiJF!5e0!3m2!1sen!2sit!4v1234567890",
     "address": {
-      "it": "Via del Porto 42, 80133 Napoli, Italia",
-      "en": "Via del Porto 42, 80133 Naples, Italy"
+      "it": "San Pietru str. Flat 2, Sylvia Court, 1083 Fgura FGR, ALTA",
+      "en": "San Pietru str. Flat 2, Sylvia Court, 1083 Fgura FGR, ALTA"
     },
-    "email": "info@marinepro.it",
-    "phone": "+39 081 123 4567"
+    "email": "info@navigomaris.com",
+    "phoneContacts": [
+      {
+        "id": "pc1",
+        "name": "Ion Jornea",
+        "phone": "+356 991 67917",
+        "role": {
+          "en": "CEO",
+          "it": "Amministratore"
+        }
+      },
+      {
+        "id": "pc2",
+        "name": "Guglielmo Grespan",
+        "phone": "+356 995 84474",
+        "role": {
+          "en": "Project Manager",
+          "it": "Responsabile"
+        }
+      },
+      {
+        "id": "pc3",
+        "name": "",
+        "phone": "+356 995 84475",
+        "role": {
+          "en": "Site Office",
+          "it": "Ufficio Cantiere"
+        }
+      },
+      {
+        "id": "pc4",
+        "name": "",
+        "phone": "+358 247 84322",
+        "role": {
+          "en": "Finland",
+          "it": "Finlandia"
+        }
+      },
+      {
+        "id": "pc5",
+        "name": "",
+        "phone": "+33 251 100052",
+        "role": {
+          "en": "France",
+          "it": "Francia"
+        }
+      },
+      {
+        "id": "pc6",
+        "name": "",
+        "phone": "+356 991 67917",
+        "role": {
+          "en": "Emergency",
+          "it": "Emergenza"
+        }
+      },
+      {
+        "id": "pc7",
+        "name": "",
+        "phone": "+356 270 12918",
+        "role": {
+          "en": "Office/Fax",
+          "it": "Ufficio/Fax"
+        }
+      }
+    ]
   },
   "aboutText": {
-    "it": "Fondata con un impegno per l'eccellenza, MarinePro fornisce servizi industriali e marini specializzati da oltre due decenni. I nostri team altamente qualificati operano in tutta Italia e a livello internazionale, portando competenza tecnica e professionalità incentrata sulla sicurezza in ogni progetto.",
-    "en": "Founded with a commitment to excellence, MarinePro has been delivering specialized industrial and marine services for over two decades. Our highly trained teams operate across Italy and internationally, bringing technical expertise and safety-first professionalism to every project."
+    "it": "NavigoMaris è stata fondata 15 anni fa come una piccola azienda specializzata nell’installazione di finestre e facciate continue, operando inizialmente sotto il nome del suo fondatore, Ion Jornea.",
+    "en": "NavigoMaris was founded 15 years ago as a small company specializing in the installation of windows and curtain walls, operating under the name of its founder, Mr. Ion Jornea."
+  },
+   "aboutDescription": {
+    "it": "Nel 2016, l’azienda ha ampliato la propria attività, cambiando denominazione in NavigoMaris Ltd e trasferendo la propria sede centrale a Malta. Grazie a un team qualificato e altamente competente, selezionato personalmente dal Sig. Jornea, l’azienda è cresciuta anno dopo anno, diventando un partner affidabile, competitivo e professionale nei settori delle costruzioni e della cantieristica navale, con filiali in Francia e Finlandia.",
+    "en": "In 2016, the company expanded its business, changed its name to NavigoMaris Ltd, and relocated its headquarters to Malta. Thanks to its skilled and qualified team, carefully selected by Mr. Jornea himself, the company has grown year after year, becoming a reliable, competitive, and professional partner in the construction and shipbuilding sectors, with branches in France and Finland."
   },
   "aboutTitle": {
-    "it": "Chi Siamo — MarinePro",
-    "en": "About MarinePro"
+    "it": "Chi Siamo — NavigoMaris",
+    "en": "About NavigoMaris"
   },
   "mission": {
     "en": "To deliver world-class marine and industrial services with an unwavering commitment to safety, quality, and innovation — protecting people, assets, and the environment at every step.",
@@ -213,8 +458,8 @@
     }
   ],
   "seoTitle": {
-    "en": "MarinePro — Marine, Rope Access & Welding Services",
-    "it": "MarinePro — Servizi Marini, Rope Access e Saldatura"
+    "en": "NavigoMaris — Marine, Rope Access & Welding Services",
+    "it": "NavigoMaris — Servizi Marini, Rope Access e Saldatura"
   },
   "seoDescription": {
     "en": "Professional naval, rope access, construction and welding services. Operating across Italy and internationally with certified expertise.",
@@ -225,61 +470,77 @@
       "id": "naval",
       "slug": "naval-marine",
       "title": {
-        "en": "Naval & Marine Services",
-        "it": "Servizi Navali e Marini"
+        "en": "Naval & Marine",
+        "it": "Navali e Marini"
       },
       "shortDesc": {
-        "en": "Comprehensive marine operations, ship maintenance, underwater inspection, and port services.",
-        "it": "Operazioni marine complete, manutenzione navi, ispezione subacquea e servizi portuali."
+        "en": "Comprehensive marine operations, ship maintenance and repair services in dry dock and at sea",
+        "it": "Operazioni marine complete, manutenzione e riparazione in bacino di carenaggio e in navigazione."
       },
       "fullDesc": {
-        "en": "Our naval division provides end-to-end marine services including hull maintenance, underwater inspections using advanced ROV technology, mooring system assessment, marine survey operations, and emergency response. Our certified divers and naval engineers deliver solutions that keep fleets operational and compliant with international maritime standards.",
-        "it": "La nostra divisione navale fornisce servizi marini completi tra cui manutenzione dello scafo, ispezioni subacquee con tecnologia ROV avanzata, valutazione dei sistemi di ormeggio, operazioni di perizia marina e risposta alle emergenze. I nostri subacquei certificati e ingegneri navali offrono soluzioni che mantengono le flotte operative e conformi agli standard marittimi internazionali."
+        "en": "We provide comprehensive installation and maintenance services, including windows installation, cabin cladding, interior fittings, and light carpentry works. Our expertise also covers the application of special sealants, glass replacement, and window and balcony maintenance. We perform both dry dock and onboard maintenance during sailing operations, including rope access work for difficult-to-access areas.",
+        "it": "Offriamo servizi completi di installazione e manutenzione, tra cui installazione di finestre, rivestimenti cabine e finiture interne, oltre a lavori di falegnameria leggera. La nostra esperienza include anche l’applicazione di sigillanti speciali, la sostituzione di vetri e la manutenzione di finestre e balconi. Eseguiamo interventi sia in bacino di carenaggio che a bordo durante la navigazione, includendo lavori su fune per le aree di difficile accesso."
       },
-      "benefits": [
-        {
-          "en": "24/7 Emergency Response",
-          "it": "Risposta d'emergenza 24/7"
-        },
-        {
-          "en": "Certified Divers & Naval Engineers",
-          "it": "Subacquei e ingegneri navali certificati"
-        },
-        {
-          "en": "ROV & Advanced Inspection Tech",
-          "it": "ROV e tecnologia di ispezione avanzata"
-        },
-        {
-          "en": "International Maritime Compliance",
-          "it": "Conformità marittima internazionale"
-        }
-      ],
+  "benefits": [
+  {
+    "en": "Expert marine technicians",
+    "it": "Tecnici esperti in ambito navale e cantieristico"
+  },
+  {
+    "en": "Onboard and dry dock expertise",
+    "it": "Competenza in bacino di carenaggio e a bordo"
+  },
+  {
+    "en": "High-quality installation and finishing work",
+    "it": "Installazioni e finiture di alta qualità"
+  },
+  {
+    "en": "Efficient maintenance in operational conditions",
+    "it": "Manutenzione efficiente in condizioni operative"
+  }
+],
       "capabilities": [
-        {
-          "en": "Hull inspection & cleaning",
-          "it": "Ispezione e pulizia dello scafo"
-        },
-        {
-          "en": "Underwater welding & cutting",
-          "it": "Saldatura e taglio subacqueo"
-        },
-        {
-          "en": "Mooring system maintenance",
-          "it": "Manutenzione sistemi di ormeggio"
-        },
-        {
-          "en": "Port & harbour services",
-          "it": "Servizi portuali"
-        },
-        {
-          "en": "Marine survey",
-          "it": "Perizia marina"
-        },
-        {
-          "en": "Salvage operations",
-          "it": "Operazioni di salvataggio"
-        }
-      ],
+  {
+    "en": "Window installation",
+    "it": "Installazione di finestre"
+  },
+  {
+    "en": "Cabin cladding",
+    "it": "Rivestimento cabine"
+  },
+  {
+    "en": "Interior fittings",
+    "it": "Finiture interne"
+  },
+  {
+    "en": "Light carpentry",
+    "it": "Falegnameria leggera"
+  },
+  {
+    "en": "Special sealant application",
+    "it": "Applicazione di sigillanti speciali"
+  },
+  {
+    "en": "Dry dock maintenance",
+    "it": "Manutenzione in bacino di carenaggio"
+  },
+  {
+    "en": "Onboard maintenance during sailing",
+    "it": "Manutenzione a bordo durante la navigazione"
+  },
+  {
+    "en": "Rope access work",
+    "it": "Lavori su fune"
+  },
+  {
+    "en": "Glass replacement",
+    "it": "Sostituzione vetri"
+  },
+  {
+    "en": "Window and balcony maintenance",
+    "it": "Manutenzione finestre e balconi"
+  }
+],
       "heroImage": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&q=80",
       "images": [
         "/public/images/uploads/carnival_horizon.jpg"
@@ -291,208 +552,208 @@
       "id": "rope",
       "slug": "rope-access",
       "title": {
-        "en": "Rope Access Services",
-        "it": "Servizi Rope Access"
+        "en": "Rope Access",
+        "it": "Servizi In Corda"
       },
       "shortDesc": {
-        "en": "IRATA-certified rope access technicians for work at height — inspection, maintenance, and installation.",
-        "it": "Tecnici rope access certificati IRATA per lavori in quota — ispezione, manutenzione e installazione."
+        "en": "Certified rope access technicians for work at height — inspection, maintenance, and installation.",
+        "it": "Tecnici rope access certificati per lavori in quota — ispezione, manutenzione e installazione."
       },
       "fullDesc": {
-        "en": "MarinePro's rope access division employs IRATA-certified Level 1, 2, and 3 technicians trained to work safely in the most challenging environments. We provide cost-effective access solutions for structures where scaffolding is impractical — from offshore platforms and bridges to high-rise facades and industrial chimneys. Our teams combine technical climbing expertise with specialist trade skills.",
-        "it": "La divisione rope access di MarinePro impiega tecnici certificati IRATA di livello 1, 2 e 3 addestrati a lavorare in sicurezza negli ambienti più difficili. Forniamo soluzioni di accesso convenienti per strutture dove l'impalcatura è impraticabile — da piattaforme offshore e ponti a facciate di grattacieli e ciminiere industriali. I nostri team combinano competenze di arrampicata tecnica con competenze commerciali specialistiche."
+        "en": "We specialize in rope access services, allowing our highly skilled technicians to safely reach and perform a wide range of works in difficult-to-access areas using ropes and harness systems. This method ensures efficiency, safety, and minimal disruption in both marine and construction environments.",
+        "it": "Siamo specializzati in servizi di lavori su fune, che permettono ai nostri tecnici altamente qualificati di raggiungere e svolgere in sicurezza diverse tipologie di intervento in aree difficilmente accessibili tramite l’uso di corde e imbracature. Questo metodo garantisce efficienza, sicurezza e un impatto minimo sia in ambito marino che edilizio."
       },
-      "benefits": [
-        {
-          "en": "IRATA Levels 1-3 Certified",
-          "it": "Certificati IRATA Livelli 1-3"
-        },
-        {
-          "en": "No Scaffolding Required",
-          "it": "Nessuna impalcatura necessaria"
-        },
-        {
-          "en": "Offshore & Onshore Capability",
-          "it": "Capacità offshore e onshore"
-        },
-        {
-          "en": "Faster & More Cost-Effective",
-          "it": "Più veloce ed economicamente vantaggioso"
-        }
-      ],
+     "benefits": [
+  {
+    "en": "Certified rope access technicians",
+    "it": "Tecnici certificati per lavori su fune"
+  },
+  {
+    "en": "Safe work in confined and elevated areas",
+    "it": "Lavori sicuri in spazi confinati e in quota"
+  },
+  {
+    "en": "Minimal disruption to operations",
+    "it": "Minimo impatto sulle attività operative"
+  },
+  {
+    "en": "Cost-efficient alternative to scaffolding",
+    "it": "Alternativa economica alle impalcature"
+  }
+],
       "capabilities": [
-        {
-          "en": "High-rise facade inspection",
-          "it": "Ispezione facciate grattacieli"
-        },
-        {
-          "en": "Offshore platform maintenance",
-          "it": "Manutenzione piattaforme offshore"
-        },
-        {
-          "en": "Bridge & structure inspection",
-          "it": "Ispezione di ponti e strutture"
-        },
-        {
-          "en": "Industrial chimney work",
-          "it": "Lavori su ciminiere industriali"
-        },
-        {
-          "en": "NDT at height",
-          "it": "NDT in quota"
-        },
-        {
-          "en": "Surface preparation & coating",
-          "it": "Preparazione superfici e rivestimento"
-        }
-      ],
+  {
+    "en": "Rope access inspection",
+    "it": "Ispezioni su fune"
+  },
+  {
+    "en": "Height maintenance works",
+    "it": "Manutenzione in quota"
+  },
+  {
+    "en": "Installation at height",
+    "it": "Installazioni in quota"
+  },
+  {
+    "en": "Facade and structure access",
+    "it": "Accesso a facciate e strutture"
+  },
+  {
+    "en": "Hard-to-reach area works",
+    "it": "Interventi in aree difficili da raggiungere"
+  },
+  {
+    "en": "Industrial rope access services",
+    "it": "Servizi industriali su fune"
+  }
+],
       "heroImage": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80",
       "images": [
         "/public/images/uploads/celebrity_ascent.jpg"
       ],
-      "icon": "mountain",
-      "color": "#e85d04"
+      "icon": "rope-access",
+      "color": "#0077b6"
     },
     {
-      "id": "construction",
-      "slug": "construction",
+      "id": "carpentry",
+      "slug": "carpentry",
       "title": {
-        "en": "Building & Construction",
-        "it": "Edilizia e Costruzioni"
+        "en": "Carpentry & Welding",
+        "it": "Carpenteria e Saldatura"
       },
       "shortDesc": {
-        "en": "Industrial and civil construction, refurbishment, and structural works with a focus on marine environments.",
-        "it": "Costruzione industriale e civile, ristrutturazione e opere strutturali con focus sugli ambienti marini."
+        "en": "Carpentry and certified welding services for woodwork, aluminum, and special steels.",
+        "it": "Servizi di carpenteria e saldatura certificata per legno, alluminio e acciai speciali."
       },
       "fullDesc": {
-        "en": "Our construction division specialises in industrial and marine construction projects, from new-build structures to comprehensive refurbishment and fit-out works. We handle civil works, structural reinforcement, concrete repair, waterproofing, and industrial fit-out — managing projects from design coordination through to handover with strict quality and safety standards.",
-        "it": "La nostra divisione edile è specializzata in progetti di costruzione industriale e marina, dalle nuove strutture alle ristrutturazioni complete e ai lavori di allestimento. Gestiamo lavori civili, rinforzo strutturale, riparazione del calcestruzzo, impermeabilizzazione e allestimento industriale — gestendo progetti dal coordinamento del design fino alla consegna con rigorosi standard di qualità e sicurezza."
+        "en": "Professional carpentry and welding services covering light woodworking, custom fabrication, and structural finishing. Our capabilities include SMAW and GMAW welding, as well as specialized welding on aluminum and high-performance steels, ensuring durable and precise results for marine and industrial applications.",
+        "it": "Servizi professionali di carpenteria e saldatura che comprendono lavorazioni lignee leggere, fabbricazioni su misura e rifiniture strutturali. Le nostre competenze includono saldatura SMAW e GMAW, oltre a saldature specializzate su alluminio e acciai ad alte prestazioni, garantendo risultati precisi e duraturi in ambito navale e industriale."
       },
       "benefits": [
-        {
-          "en": "Marine Environment Specialists",
-          "it": "Specialisti ambienti marini"
-        },
-        {
-          "en": "Full Project Management",
-          "it": "Project management completo"
-        },
-        {
-          "en": "ISO 9001 Quality Management",
-          "it": "Gestione qualità ISO 9001"
-        },
-        {
-          "en": "Structural Engineering Support",
-          "it": "Supporto ingegneria strutturale"
-        }
-      ],
-      "capabilities": [
-        {
-          "en": "Industrial construction",
-          "it": "Costruzione industriale"
-        },
-        {
-          "en": "Structural refurbishment",
-          "it": "Ristrutturazione strutturale"
-        },
-        {
-          "en": "Concrete repair & protection",
-          "it": "Riparazione e protezione calcestruzzo"
-        },
-        {
-          "en": "Waterproofing systems",
-          "it": "Sistemi di impermeabilizzazione"
-        },
-        {
-          "en": "Marine construction",
-          "it": "Costruzioni marine"
-        },
-        {
-          "en": "Fit-out & finishing works",
-          "it": "Lavori di allestimento e finitura"
-        }
-      ],
+  {
+    "en": "Skilled carpentry and precision finishing",
+    "it": "Carpenteria qualificata e finiture di precisione"
+  },
+  {
+    "en": "Certified SMAW and GMAW welding",
+    "it": "Saldatura certificata SMAW e GMAW"
+  },
+  {
+    "en": "Specialized aluminum and steel welding",
+    "it": "Saldatura specializzata di alluminio e acciai"
+  },
+  {
+    "en": "Durable solutions for marine and industrial use",
+    "it": "Soluzioni durevoli per uso navale e industriale"
+  }
+],
+     "capabilities": [
+  {
+    "en": "Light carpentry works",
+    "it": "Lavori di falegnameria leggera"
+  },
+  {
+    "en": "Custom wood fabrication",
+    "it": "Realizzazioni in legno su misura"
+  },
+  {
+    "en": "Structural finishing works",
+    "it": "Finiture strutturali"
+  },
+  {
+    "en": "Shielded metal arc welding (SMAW)",
+    "it": "Saldatura ad arco con elettrodo rivestito (SMAW)"
+  },
+  {
+    "en": "Gas metal arc welding (GMAW)",
+    "it": "Saldatura a filo (GMAW)"
+  },
+  {
+    "en": "Aluminum welding",
+    "it": "Saldatura alluminio"
+  },
+  {
+    "en": "Special steel welding",
+    "it": "Saldatura acciai speciali"
+  }
+],
       "heroImage": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80",
       "images": [
         "/public/images/uploads/cloche_d_or.jpg"
       ],
-      "icon": "building",
-      "color": "#588157"
+      "icon": "carpentry",
+      "color": "#0077b6"
     },
     {
-      "id": "welding",
-      "slug": "welding",
+      "id": "civil-engineering",
+      "slug": "civil-engineering",
       "title": {
-        "en": "Welding Services",
-        "it": "Servizi di Saldatura"
+        "en": "Civil Engineering Works",
+        "it": "Lavori di Ingegneria Civile"
       },
       "shortDesc": {
-        "en": "Certified welding for structural, pipeline, offshore, and precision applications.",
-        "it": "Saldatura certificata per applicazioni strutturali, pipeline, offshore e di precisione."
+        "en": "Installation of cladding, curtain walls, and interior systems including partitions, ceilings, and floating floors for marine and construction projects.",
+        "it": "Installazione di rivestimenti, facciate continue e sistemi interni, incluse pareti, controsoffitti e pavimenti flottanti per ambito navale ed edilizio."
       },
       "fullDesc": {
-        "en": "MarinePro's welding department provides certified welding services across multiple processes including MIG/MAG, TIG, SMAW, and FCAW. Our welders are qualified to international standards (AWS, ISO, EN) and work across a broad range of materials — carbon steel, stainless steel, aluminium, and exotic alloys. We operate in-shop and on-site, including underwater welding through our marine division.",
-        "it": "Il reparto saldatura di MarinePro fornisce servizi di saldatura certificati su più processi tra cui MIG/MAG, TIG, SMAW e FCAW. I nostri saldatori sono qualificati secondo standard internazionali (AWS, ISO, EN) e lavorano su un'ampia gamma di materiali — acciaio al carbonio, acciaio inossidabile, alluminio e leghe esotiche. Operiamo in officina e in loco, inclusa la saldatura subacquea attraverso la nostra divisione marina."
+        "en": "Our team delivers professional installation services for cladding and curtain wall systems at all heights, ensuring precision, safety, and durability. Our expertise also includes the construction of interior partition walls, suspended ceilings, and floating floors, providing complete interior and exterior finishing solutions for marine and construction environments.",
+        "it": "Il nostro team offre servizi professionali di installazione di rivestimenti e facciate continue in quota, garantendo precisione, sicurezza e durabilità. La nostra esperienza comprende anche la realizzazione di pareti divisorie interne, controsoffitti sospesi e pavimenti flottanti, fornendo soluzioni complete di finitura interna ed esterna in ambito navale ed edilizio."
       },
       "benefits": [
-        {
-          "en": "AWS & ISO Certified Welders",
-          "it": "Saldatori certificati AWS e ISO"
-        },
-        {
-          "en": "All Major Welding Processes",
-          "it": "Tutti i principali processi di saldatura"
-        },
-        {
-          "en": "NDT & Quality Inspection",
-          "it": "NDT e ispezione qualità"
-        },
-        {
-          "en": "On-site & In-shop Capability",
-          "it": "Capacità in loco e in officina"
-        }
-      ],
+  {
+    "en": "Complete interior and façade solutions",
+    "it": "Soluzioni complete per interni e facciate"
+  },
+  {
+    "en": "High-quality installation at all heights",
+    "it": "Installazioni di alta qualità in quota"
+  },
+  {
+    "en": "Efficient and precise execution",
+    "it": "Esecuzione efficiente e precisa"
+  },
+  {
+    "en": "Marine and construction expertise",
+    "it": "Esperienza in ambito navale ed edilizio"
+  }
+],
       "capabilities": [
-        {
-          "en": "Structural steel welding",
-          "it": "Saldatura acciaio strutturale"
-        },
-        {
-          "en": "Pipeline welding",
-          "it": "Saldatura pipeline"
-        },
-        {
-          "en": "Stainless & aluminium welding",
-          "it": "Saldatura inox e alluminio"
-        },
-        {
-          "en": "Underwater welding",
-          "it": "Saldatura subacquea"
-        },
-        {
-          "en": "Pressure vessel welding",
-          "it": "Saldatura recipienti a pressione"
-        },
-        {
-          "en": "Weld inspection & NDT",
-          "it": "Ispezione saldature e NDT"
-        }
-      ],
+  {
+    "en": "Cladding installation at all heights",
+    "it": "Installazione di rivestimenti in quota"
+  },
+  {
+    "en": "Curtain wall installation",
+    "it": "Installazione di facciate continue"
+  },
+  {
+    "en": "Interior partition wall installation",
+    "it": "Installazione di pareti divisorie interne"
+  },
+  {
+    "en": "Suspended ceiling installation",
+    "it": "Installazione di controsoffitti sospesi"
+  },
+  {
+    "en": "Floating floor installation",
+    "it": "Installazione di pavimenti flottanti"
+  }
+],
       "heroImage": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=80",
       "images": [
         "/public/images/uploads/costa_smeralda.jpg"
       ],
-      "icon": "flame",
-      "color": "#c1121f"
+      "icon": "civil-engineering",
+      "color": "#0077b6"
     }
   ],
   "team": [
     {
       "id": "t1",
-      "name": "Marco Esposito",
+      "name": "Ion Jornea",
       "role": {
-        "en": "CEO & Naval Engineer",
-        "it": "CEO e Ingegnere Navale"
+        "en": "CEO",
+        "it": "Amministratore"
       },
       "bio": {
         "en": "25+ years in marine engineering and offshore operations.",
@@ -502,29 +763,80 @@
     },
     {
       "id": "t2",
-      "name": "Luca Romano",
+      "name": "Guglielmo Grespan",
       "role": {
-        "en": "Head of Rope Access",
-        "it": "Responsabile Rope Access"
+        "en": "Project Manager",
+        "it": "Project Manager"
       },
       "bio": {
-        "en": "IRATA Level 3 supervisor with 15 years of rope access experience.",
-        "it": "Supervisore IRATA Livello 3 con 15 anni di esperienza nel rope access."
+        "en": "Project Coordinator with 15 years in shipbuilding and marine construction.",
+        "it": "Coordinatore di progetto con 15 anni di esperienza nella cantieristica navale e costruzioni marine."
       },
       "photo": "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8b2ZmaWNlJTIwbWFufGVufDB8fDB8fHwy"
     },
     {
       "id": "t3",
-      "name": "Sofia Ferraro",
+      "name": "Radoslava Radeva",
       "role": {
-        "en": "Construction Manager",
-        "it": "Responsabile Costruzioni"
+        "en": "Assistant Project Manager",
+        "it": "Assistante Project Manager"
       },
       "bio": {
-        "en": "Structural engineer specialising in marine and industrial construction.",
-        "it": "Ingegnere strutturale specializzato in costruzioni marine e industriali."
+        "en": "Assistant Site Coordinator in marine construction, highly experienced professional.",
+        "it": "Assistente Coordinatore di cantiere nella costruzione navale, professionista esperto."
       },
       "photo": "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8b2ZmaWNlJTIwbWFufGVufDB8fDB8fHwy"
+    }
+  ],
+  "qualifications": [
+    {
+      "id": "q1",
+      "name": {
+        "en": "Health & Safety Training",
+        "it": "Formazione Sicurezza e Salute"
+      }
+    },
+    {
+      "id": "q2",
+      "name": {
+        "en": "Work at Height Certification",
+        "it": "Certificazione Lavoro in Quota"
+      }
+    },
+    {
+      "id": "q3",
+      "name": {
+        "en": "AWP / EWP Operator Training",
+        "it": "Formazione Piattaforme Aeree (AWP/EWP)"
+      }
+    },
+    {
+      "id": "q4",
+      "name": {
+        "en": "Forklift Operation Certification",
+        "it": "Certificazione Conduzione Muletto"
+      }
+    },
+    {
+      "id": "q5",
+      "name": {
+        "en": "Advanced Sealant Application Training",
+        "it": "Formazione Applicazione Sigillanti Avanzata"
+      }
+    },
+    {
+      "id": "q6",
+      "name": {
+        "en": "SMAW / GMAW Welding Training",
+        "it": "Formazione Saldatura Alluminio e Acciai Speciali"
+      }
+    },
+    {
+      "id": "q7",
+      "name": {
+        "en": "Rope Access Training",
+        "it": "Formazione Lavori in Corda"
+      }
     }
   ]
 }

@@ -20,8 +20,9 @@ const ADMIN_KEY = 'marinepro_admin';
 export function CMSProvider({ children }: { children: ReactNode }) {
   const [content, setContent] = useState<SiteContent>(() => {
     try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      return stored ? JSON.parse(stored) : defaultContent;
+      ///const stored = localStorage.getItem(STORAGE_KEY);
+      // return stored ? JSON.parse(stored) : defaultContent;
+      return defaultContent;
     } catch {
       return defaultContent;
     }

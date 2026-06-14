@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CMSProvider } from './hooks/useCMS';
 import Layout from './components/layout/Layout';
@@ -11,10 +10,24 @@ import Contact from './pages/Contact';
 import AdminPanel from './pages/AdminPanel';
 import './styles.css';
 
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+export function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 export default function App() {
   return (
     <CMSProvider>
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
           <Route path="/cms-admin" element={<AdminPanel />} />
           <Route path="/" element={<Layout />}>

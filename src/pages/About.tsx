@@ -1,11 +1,20 @@
 import { Link } from 'react-router-dom';
 import { useCMS } from '../hooks/useCMS';
 import { ArrowRight, Shield, Award, Target, Zap, Users } from 'lucide-react';
+import { getPublicUrl } from '../utils/supabase';
 
 export default function About() {
   const { content, t } = useCMS();
 
   const valueIcons = [Shield, Award, Target, Zap, Users];
+  const teamImageUrl = getPublicUrl('team/team.avif');
+  const ceoImageUrl = getPublicUrl('team/jornea_profile.png');
+  const member1ImageUrl = getPublicUrl('team/member1.avif');
+  const member2ImageUrl = getPublicUrl('team/member2.avif');
+
+  content.team[0].photo = ceoImageUrl;
+  content.team[1].photo = member1ImageUrl;
+  content.team[2].photo = member2ImageUrl;
 
   return (
     <>
@@ -16,7 +25,7 @@ export default function About() {
         <div className="container page-hero__content">
           <div className="section-label light">{t({ en: 'Who We Are', it: 'Chi Siamo' })}</div>
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(3rem,7vw,6rem)', color: 'white', lineHeight: 0.95, letterSpacing: '0.03em' }}>
-            {t({ en: 'About\nMarinePro', it: 'Chi Siamo —\nMarinePro' })}
+            {t({ en: 'About\nNavigoMaris', it: 'Chi Siamo —\nNavigoMaris' })}
           </h1>
         </div>
       </div>
@@ -33,14 +42,14 @@ export default function About() {
                 {t(content.aboutText)}
               </p>
               <p style={{ color: 'var(--text-muted)', lineHeight: 1.8 }}>
-                {t({ en: 'From underwater hull inspections in the Mediterranean to rope access works on offshore platforms, we combine deep technical expertise with an uncompromising safety culture. Every project, regardless of scale, receives the same level of professionalism and attention to detail.', it: 'Dalle ispezioni subacquee degli scafi nel Mediterraneo ai lavori di rope access su piattaforme offshore, combiniamo una profonda competenza tecnica con una cultura della sicurezza senza compromessi. Ogni progetto, indipendentemente dalle dimensioni, riceve lo stesso livello di professionalità e attenzione ai dettagli.' })}
+                {t(content.aboutDescription)}
               </p>
               <div style={{ marginTop: 36 }}>
                 <Link to="/contact" className="btn btn-primary">{t({ en: 'Work With Us', it: 'Lavora Con Noi' })} <ArrowRight size={16} /></Link>
               </div>
             </div>
             <div style={{ position: 'relative' }}>
-              <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800&q=80" alt="NavigoMaris team" style={{ borderRadius: 'var(--radius-lg)', width: '100%', objectFit: 'cover', aspectRatio: '4/3' }} />
+              <img src={teamImageUrl} alt="NavigoMaris team" style={{ borderRadius: 'var(--radius-lg)', width: '100%', objectFit: 'cover', aspectRatio: '4/3' }} />
               <div style={{ position: 'absolute', bottom: -24, left: -24, background: 'var(--navy)', borderRadius: 'var(--radius-lg)', padding: '24px 32px', color: 'white', boxShadow: 'var(--shadow-lg)' }}>
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: '3rem', color: 'var(--accent)', lineHeight: 1 }}>20+</div>
                 <div style={{ fontFamily: 'var(--font-condensed)', fontSize: 13, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', marginTop: 4 }}>
@@ -119,13 +128,13 @@ export default function About() {
       </section>
 
       {/* Certifications */}
-      <section className="section-sm" style={{ background: 'var(--navy)' }}>
+      <section className="section-sm" style={{ background: 'var(--ocean)' }}>
         <div className="container" style={{ textAlign: 'center' }}>
-          <div className="section-label" style={{ justifyContent: 'center' }}>{t({ en: 'Standards & Certifications', it: 'Standard e Certificazioni' })}</div>
+          <div className="section-label" style={{ justifyContent: 'center' }}>{t({ en: 'Trainings & Certifications', it: 'Formazione & Certificazioni' })}</div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, justifyContent: 'center', marginTop: 32 }}>
-            {['ISO 9001:2015', 'IRATA Level 3', 'AWS D1.1', 'ISO 3834', 'IMCA', 'EN 1090'].map(cert => (
-              <div key={cert} style={{ padding: '12px 28px', border: '1px solid rgba(232,160,32,0.4)', borderRadius: 'var(--radius)', fontFamily: 'var(--font-condensed)', fontSize: 14, fontWeight: 700, letterSpacing: '0.1em', color: 'var(--accent)' }}>
-                {cert}
+            {content.qualifications.map(cert => (
+              <div key={cert.id} style={{ padding: '12px 28px', border: '1px solid rgba(232,160,32,0.4)', borderRadius: 'var(--radius)', fontFamily: 'var(--font-condensed)', fontSize: 14, fontWeight: 700, letterSpacing: '0.1em', color: 'var(--accent)' }}>
+                {t(cert.name)}
               </div>
             ))}
           </div>

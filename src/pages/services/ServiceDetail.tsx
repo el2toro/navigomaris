@@ -2,13 +2,37 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useCMS } from '../../hooks/useCMS';
 import { ArrowRight, Check, ArrowLeft } from 'lucide-react';
+import { getPublicUrl } from '../../utils/supabase';
 
 export default function ServiceDetail() {
   const { slug } = useParams<{ slug: string }>();
   const { content, t } = useCMS();
   const [activeImage, setActiveImage] = useState(0);
 
+  const civilEngineeringHeroImageUrl = getPublicUrl('services/civil_engineering_hero.avif');
+  const ropeAccessHeroImageUrl = getPublicUrl('services/rope_access_hero.jpg');
+  const carpentryHeroImageUrl = getPublicUrl('services/carpentry_hero.jpg');
+  const navalHeroImageUrl = getPublicUrl('services/naval_hero.jpg');
+
+  content.services.map(s => s.id === 'civil-engineering' 
+    ? s.heroImage = civilEngineeringHeroImageUrl 
+    : s.id === 'rope' ? s.heroImage = ropeAccessHeroImageUrl 
+    : s.id === 'carpentry' ? s.heroImage = carpentryHeroImageUrl
+    : s.id === 'naval-marine' ? s.heroImage = navalHeroImageUrl
+    : '');
+
   const service = content.services.find(s => s.slug === slug);
+  
+
+  const navalIconUrl = getPublicUrl('icons/cruise_ship.svg');
+const ropeIconUrl = getPublicUrl('icons/climbing.svg');
+const civilEngineeringIconUrl = getPublicUrl('icons/helmet_construction.svg');
+const carpentryIconUrl = getPublicUrl('icons/welder.svg');
+
+const navalServiceUrl = getPublicUrl('services/marine_service.avif');
+const ropeServiceUrl = getPublicUrl('services/rope_acces_service.avif');
+const civilEngineeringServiceUrl = getPublicUrl('services/construction_service.avif');
+const carpentryServiceUrl = getPublicUrl('services/carpentry_service.jpg');
 
   if (!service) {
     return (
@@ -19,8 +43,13 @@ export default function ServiceDetail() {
     );
   }
 
+  service.images[0] = service.id === 'naval' ? navalServiceUrl : service.id === 'rope-access' ? ropeServiceUrl : service.id === 'civil-engineering' ? civilEngineeringServiceUrl : carpentryServiceUrl;
+
+  service.icon = service.id === 'naval' ? navalIconUrl : service.id === 'rope-access' ? ropeIconUrl : service.id === 'civil-engineering' ? civilEngineeringIconUrl : carpentryIconUrl;
+
+
   const catColors: Record<string, string> = {
-    naval: 'badge-naval', rope: 'badge-rope', construction: 'badge-construction', welding: 'badge-welding'
+    naval: 'badge-naval', rope: 'badge-rope', 'civil-engineering': 'badge-civil-engineering', carpentry: 'badge-carpentry'
   };
 
   const relatedProjects = content.projects.filter(p => p.serviceCategory === service.id);
@@ -88,7 +117,7 @@ export default function ServiceDetail() {
               </div>
 
               <div style={{ marginTop: 40 }}>
-                <Link to="/contact" className="btn btn-primary" style={{ background: service.color }}>
+                <Link to="/contact" className="btn btn-primary" style={{ background:  service.color, color: 'var(--accent)' }}>
                   {t({ en: 'Request This Service', it: 'Richiedi Questo Servizio' })} <ArrowRight size={16} />
                 </Link>
               </div>
@@ -118,7 +147,7 @@ export default function ServiceDetail() {
             <div className="section-label">{t({ en: 'Case Studies', it: 'Casi Studio' })}</div>
             <h2 className="section-title" style={{ marginBottom: 40 }}>{t({ en: 'Related Projects', it: 'Progetti Correlati' })}</h2>
             <div className="grid-3">
-              {relatedProjects.map(project => (
+              {relatedProjects.slice(0, 3).map(project => (
                 <div key={project.id} className="card">
                   <div style={{ height: 200, overflow: 'hidden' }}>
                     <img src={project.images[0]} alt={t(project.title)} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease' }}

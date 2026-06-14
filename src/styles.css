@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;500;600;700&display=swap');
 
 :root {
-  --navy: #243e65;
+  --navy: #3d66a2;
   --navy-mid: #112240;
   --navy-light: #1a3358;
   --steel: #2d4a6e;
@@ -483,7 +483,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent);
+  /* color: var(--accent); */
   margin-top: 12px;
   opacity: 0;
   transform: translateX(-8px);

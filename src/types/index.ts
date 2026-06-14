@@ -46,10 +46,22 @@ export interface TeamMember {
 }
 
 export interface ContactInfo {
-  phone: string;
+  phoneContacts: PhoneContact[];
   email: string;
   address: TranslatedString;
   mapEmbed: string;
+}
+
+export interface PhoneContact {
+  id: string;
+  name: string;
+  phone: string;
+  role: TranslatedString;
+}
+
+export interface Qualification {
+  id: string;
+  name: TranslatedString;
 }
 
 export interface SiteContent {
@@ -58,6 +70,7 @@ export interface SiteContent {
   heroImages: string[];
   aboutTitle: TranslatedString;
   aboutText: TranslatedString;
+  aboutDescription: TranslatedString;
   mission: TranslatedString;
   values: TranslatedString[];
   seoTitle: TranslatedString;
@@ -67,4 +80,5 @@ export interface SiteContent {
   projects: Project[];
   clients: Client[];
   team: TeamMember[];
+  qualifications: Qualification[];
 }

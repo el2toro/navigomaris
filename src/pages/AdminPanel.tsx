@@ -445,7 +445,7 @@ function ContactEditor({ content, updateContent }: { content: SiteContent; updat
         <h3>Contact Details</h3>
         <div style={{ display: 'grid', gap: 16 }}>
           <div><label className="form-label">Phone</label>
-            <input className="form-input" value={info.phone} onChange={e => setInfo(p => ({ ...p, phone: e.target.value }))} /></div>
+            <input className="form-input" value={'info.phone'} onChange={e => setInfo(p => ({ ...p, phone: e.target.value }))} /></div>
           <div><label className="form-label">Email</label>
             <input className="form-input" type="email" value={info.email} onChange={e => setInfo(p => ({ ...p, email: e.target.value }))} /></div>
           <div><label className="form-label">Address — English</label>

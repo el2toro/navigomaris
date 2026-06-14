@@ -11,14 +11,14 @@ collections:
     label: "Website Content"
     files:
       - name: "site-content"
-        label: "Site Content"
+        label: "Home Page"
         file: "src/content/site-content.json"
         format: "json"
         extension: "json"
         create: false
         delete: false
         editor:
-          preview: false
+          preview: true
         fields:
           - label: "Hero Title"
             name: "heroTitle"
