@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useCMS } from '../hooks/useCMS';
 import { ArrowRight } from 'lucide-react';
 import { getPublicUrl } from '../utils/supabase';
+import { Helmet } from 'react-helmet-async';
 
 const servicesHeroImageUrl = getPublicUrl('services/services_hero.jpg');
 
@@ -36,6 +37,13 @@ export default function Services() {
 
   return (
     <>
+    <Helmet>
+      <title>Our Services | Navigomaris – Civil, Marine, Carpentry & Rope Access</title>
+      <meta name="description" content="Navigomaris provides cladding and curtain wall installation, marine interior fittings, shielded and aluminum welding, and certified rope access work at any height." />
+      <meta property="og:title" content="Our Services | Navigomaris" />
+      <meta property="og:description" content="Navigomaris provides cladding and curtain wall installation, marine interior fittings, shielded and aluminum welding, and certified rope access work at any height." />
+      <meta property="og:url" content="https://navigomaris.com/services" />
+    </Helmet>
       <div className="page-hero">
         <img className="page-hero__bg" src={servicesHeroImageUrl} alt="" />
         <div className="page-hero__overlay" />

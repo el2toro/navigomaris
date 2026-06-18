@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useCMS } from '../hooks/useCMS';
 import { getPublicUrl } from '../utils/supabase';
+import { Helmet } from 'react-helmet-async';
 
 type Filter = 'all' | 'naval' | 'rope' | 'civil-engineering' | 'carpentry';
 
@@ -78,6 +79,13 @@ export default function Projects() {
 
   return (
     <>
+    <Helmet>
+      <title>Projects | Navigomaris – International Portfolio</title>
+      <meta name="description" content="Browse completed projects by Navigomaris including civil construction, marine vessel refits, curtain wall installations and rope access works delivered internationally." />
+      <meta property="og:title" content="Projects | Navigomaris" />
+      <meta property="og:description" content="Browse completed projects by Navigomaris including civil construction, marine vessel refits, curtain wall installations and rope access works delivered internationally." />
+      <meta property="og:url" content="https://navigomaris.com/projects" />
+    </Helmet>
       <div className="page-hero">
         <img className="page-hero__bg" src={heroImageUrl} alt="" />
         <div className="page-hero__overlay" />

@@ -327,7 +327,7 @@ function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} NavigoMaris LTD — {t({ en: 'All rights reserved', it: 'Tutti i diritti riservati' })}</span>
-          <button
+          {/* <button
             onClick={() => {
               const pass = prompt('Admin password:');
               if (pass === 'admin123') { localStorage.setItem('navigomaris_admin', 'true'); window.location.href = '/admin'; }
@@ -335,7 +335,7 @@ function Footer() {
             style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)', cursor: 'pointer', background: 'none', border: 'none', fontFamily: 'var(--font-body)' }}
           >
             {t({ en: 'Admin', it: 'Amministratore' })}
-          </button>
+          </button> */}
         </div>
       </div>
     </footer>

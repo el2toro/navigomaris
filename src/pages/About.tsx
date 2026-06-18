@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useCMS } from '../hooks/useCMS';
 import { ArrowRight, Shield, Award, Target, Zap, Users } from 'lucide-react';
 import { getPublicUrl } from '../utils/supabase';
+import { Helmet } from 'react-helmet-async';
 
 export default function About() {
   const { content, t } = useCMS();
@@ -18,6 +19,13 @@ export default function About() {
 
   return (
     <>
+    <Helmet>
+      <title>About Us | Navigomaris – Malta</title>
+      <meta name="description" content="Learn about Navigomaris, a Malta-based contractor with 20+ years of experience in civil works, marine fitting, carpentry and rope access across international projects." />
+      <meta property="og:title" content="About Us | Navigomaris" />
+      <meta property="og:description" content="Learn about Navigomaris, a Malta-based contractor with 20+ years of experience in civil works, marine fitting, carpentry and rope access across international projects." />
+      <meta property="og:url" content="https://navigomaris.com/about" />
+   </Helmet>
       {/* Page Hero */}
       <div className="page-hero">
         <img className="page-hero__bg" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=80" alt="" />

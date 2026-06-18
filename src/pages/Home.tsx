@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useCMS } from '../hooks/useCMS';
 import { ArrowRight, Anchor, Phone, Mail, ChevronRight } from 'lucide-react';
 import supabase, { getPublicUrl } from '../utils/supabase';
+import { Helmet } from 'react-helmet-async';
 
 const celebrityBeyondUrl = getPublicUrl('hero/celebrity_beyond.jpg');
 const wonderOfTheSeasUrl = getPublicUrl('hero/wonder_of_the_seas.jpg');
@@ -37,10 +38,8 @@ function Hero() {
 
   content.heroImages = [wonderOfTheSeasUrl, iconOfTheSeasUrl, celebrityBeyondUrl, clocheDorUrl];
   content.projects[0].images = [project1Url];
-   content.projects[1].images = [project2Url];
-    content.projects[2].images = [project3Url];
-
-    console.log(project2Url)
+  content.projects[1].images = [project2Url];
+  content.projects[2].images = [project3Url];
 
   useEffect(() => {
     const timer = setInterval(() => setCurrent(p => (p + 1) % content.heroImages.length), 5000);
@@ -262,8 +261,6 @@ function ServicesSection() {
 
   const icons: Record<string, string> = { naval: navalIconUrl, rope: ropeIconUrl, 'civil-engineering': civilEngineeringIconUrl, carpentry: carpentryIconUrl };
   const serviceImages: Record<string, string> = { naval: navalServiceUrl, rope: ropeServiceUrl, 'civil-engineering': civilEngineeringServiceUrl, carpentry: carpentryServiceUrl };
-
-  console.log('Service Images:', civilEngineeringServiceUrl);
 
   return (
     <section className="section" style={{ background: 'var(--off-white)' }}>
@@ -521,6 +518,13 @@ function QuickContact() {
 export default function Home() {
   return (
     <>
+    <Helmet>
+      <title>Navigomaris | Civil, Naval, Carpentry & Rope Access Specialists</title>
+      <meta name="description" content="Navigomaris offers expert civil engineering works, naval, carpentry and rope access services all over the globe. 25+ years of experience delivering projects worldwide." />
+      <meta property="og:title" content="Navigomaris | Civil, Carpentry, Marine & Rope Access Specialists – Worldwide" />
+      <meta property="og:description" content="Navigomaris offers expert civil engineering works, naval, carpentry and rope access services all over the globe. 25+ years of experience delivering projects worldwide." />
+      <meta property="og:url" content="https://navigomaris.com" />
+    </Helmet>
       <Hero />
       <StatsBar />
       <ServicesSection />

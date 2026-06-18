@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useCMS } from '../hooks/useCMS';
 import { Phone, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 export default function Contact() {
   const { content, t } = useCMS();
@@ -15,6 +16,13 @@ export default function Contact() {
 
   return (
     <>
+    <Helmet>
+      <title>Contact Us | Navigomaris – Malta</title>
+      <meta name="description" content="Get in touch with Navigomaris for civil works, marine fitting, carpentry and rope access services. Based in Malta, operating internationally." />
+      <meta property="og:title" content="Contact Us | Navigomaris" />
+      <meta property="og:description" content="Get in touch with Navigomaris for civil works, marine fitting, carpentry and rope access services. Based in Malta, operating internationally." />
+      <meta property="og:url" content="https://navigomaris.com/contact" />
+   </Helmet>
       <div className="page-hero">
         <img className="page-hero__bg" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=80" alt="" />
         <div className="page-hero__overlay" />
